@@ -43,6 +43,7 @@ class Piece:
         area = np.linalg.norm(np.cross(tri[:, 1] - tri[:, 0], tri[:, 2] - tri[:, 0]), axis=1)
         self.faces = faces[area > 1e-10]
         self.verts, self.uv, self.chart = verts, np.asarray(uv, float), chart
+        self.smooth_deg = 35.0            # seam welding angle; 0 keeps every facet hard
         if not smooth:
             self.unweld()
 
@@ -87,16 +88,35 @@ class Piece:
     def copy(self):
         p = Piece.__new__(Piece)
         p.verts, p.faces, p.uv, p.chart = self.verts.copy(), self.faces.copy(), self.uv.copy(), self.chart
+        p.smooth_deg = getattr(self, "smooth_deg", 35.0)
         return p
 
-    def normals(self):
+    def normals(self, smooth_deg=None):
+        smooth_deg = getattr(self, "smooth_deg", 35.0) if smooth_deg is None else smooth_deg
         tri = self.verts[self.faces]
         fn = np.cross(tri[:, 1] - tri[:, 0], tri[:, 2] - tri[:, 0])  # area weighted
         vn = np.zeros_like(self.verts)
         for k in range(3):
             np.add.at(vn, self.faces[:, k], fn)
         ln = np.linalg.norm(vn, axis=1, keepdims=True)
-        return vn / np.where(ln < 1e-12, 1, ln)
+        vn = vn / np.where(ln < 1e-12, 1, ln)
+        # Weld normals across seams: co-located vertices whose normals are within smooth_deg.
+        key = np.round(self.verts / 1e-5).astype(np.int64)
+        _, inv, cnt = np.unique(key, axis=0, return_inverse=True, return_counts=True)
+        inv = inv.ravel()
+        multi = np.where(cnt[inv] > 1)[0]
+        if len(multi) and smooth_deg > 0:
+            cos_t = math.cos(math.radians(smooth_deg))
+            out = vn.copy()
+            order = multi[np.argsort(inv[multi], kind="stable")]
+            groups = np.split(order, np.flatnonzero(np.diff(inv[order])) + 1)
+            for g in groups:
+                n = vn[g]
+                close = (n @ n.T) > cos_t
+                acc = close.astype(float) @ n
+                out[g] = acc / np.maximum(np.linalg.norm(acc, axis=1, keepdims=True), 1e-12)
+            vn = out
+        return vn
 
 
 def mirror(piece, axis=0):
@@ -152,6 +172,7 @@ def merge_pieces(pieces):
         off += len(p.verts)
     out = Piece.__new__(Piece)
     out.verts, out.faces, out.uv, out.chart = np.vstack(v), np.vstack(f), np.vstack(uv), pieces[0].chart
+    out.smooth_deg = min(getattr(p, "smooth_deg", 35.0) for p in pieces)
     return out
 
 
@@ -213,7 +234,7 @@ def tube(path, radius, chart=None, painter=None, segs=10, up=(0, 0, 1), closed=F
 
 
 def pillow(outline, t_center, t_edge=0.01, ramp=0.1, chart=None, painter=None, holes=(),
-           max_area=None, thick_fn=None, name="pillow"):
+           max_area=None, thick_fn=None, name="pillow", back_chart=None):
     """A flat shape in the XY plane, inflated along Z: thick in the middle (t_center, a half
     thickness) easing to t_edge at the rim over `ramp` studs. Great for axe heads, guards,
     leaves, wings. Front and back share one planar-mapped chart."""
@@ -235,7 +256,7 @@ def pillow(outline, t_center, t_edge=0.01, ramp=0.1, chart=None, painter=None, h
         data["holes"] = np.array([Polygon(h).representative_point().coords[0] for h in holes])
     minx, miny, maxx, maxy = poly.bounds
     if max_area is None:
-        max_area = (poly.area / 90)
+        max_area = (poly.area / 50)
     T = tr.triangulate(data, f"pq28a{max_area:.6f}")
     v2, f = T["vertices"], T["triangles"]
     d = shapely.distance(poly.boundary, shapely.points(v2))
@@ -249,7 +270,7 @@ def pillow(outline, t_center, t_edge=0.01, ramp=0.1, chart=None, painter=None, h
         chart = Chart(w, h, painter, name)
     uv = np.column_stack([(v2[:, 0] - minx) / w, 1 - (v2[:, 1] - miny) / h])
     front = Piece(np.column_stack([v2, z]), f, uv, chart).orient(lambda c: np.tile([0, 0, 1.0], (len(c), 1)))
-    back = Piece(np.column_stack([v2, -z]), f, uv, chart).orient(lambda c: np.tile([0, 0, -1.0], (len(c), 1)))
+    back = Piece(np.column_stack([v2, -z]), f, uv, back_chart or chart).orient(lambda c: np.tile([0, 0, -1.0], (len(c), 1)))
     # Rim wall: one hard-edged strip per boundary loop (using the triangulator's own boundary,
     # which may have split the input segments).
     rims = []
@@ -286,6 +307,8 @@ def pillow(outline, t_center, t_edge=0.01, ramp=0.1, chart=None, painter=None, h
         inside = shapely.contains_xy(poly, probe[:, 0], probe[:, 1])
         rim.faces[inside] = rim.faces[inside][:, ::-1]
         rims.append(rim)
+    if back_chart is not None:
+        return [merge_pieces([front] + rims), back]
     return merge_pieces([front, back] + rims)
 
 
@@ -344,6 +367,93 @@ def blade(stations, section, chart=None, painter=None, name="blade"):
     return merge_pieces(pieces)
 
 
+
+def surface(fn, nu, nv, chart=None, painter=None, su=1.0, sv=1.0, ref=None, name="surface"):
+    """Parametric surface. fn(U, V) -> (X, Y, Z) for U, V grids in [0, 1] (rows = v).
+    ref(face_centres) -> outward directions, used to fix the winding."""
+    U, V = np.meshgrid(np.linspace(0, 1, nu), np.linspace(0, 1, nv))
+    X, Y, Z = fn(U, V)
+    if chart is None:
+        chart = Chart(su, sv, painter, name)
+    p = Piece(np.column_stack([np.ravel(X), np.ravel(Y), np.ravel(Z)]), grid_faces(nv, nu),
+              np.column_stack([U.ravel(), V.ravel()]), chart)
+    return p.orient(ref) if ref is not None else p
+
+
+def dome_shell(rx, ry, rz, rim=lambda th: 1.6, thick=0.05, segs=32, rings=10, chart=None, painter=None,
+               inner_chart=None, peak=0.0, bulge=None, center=(0, 0, 0), name="dome"):
+    """Helmet-style shell. Polar angle phi runs from 0 (top) to rim(theta) (radians from the
+    top), so the rim can sit higher at the face. theta = 0 is the FRONT, which faces -Z.
+    peak lifts the crown into a point; bulge(phi, theta) -> radius multiplier."""
+    c = np.asarray(center, float)
+
+    def pts(U, V, inset):
+        th = U * 2 * math.pi
+        phi = (1 - V) * rim(th)
+        k = 1.0 if bulge is None else bulge(phi, th)
+        sx, sy, sz = (rx - inset) * k, (ry - inset) * k, (rz - inset) * k
+        y = sy * np.cos(phi) + peak * np.clip(1 - phi / 0.9, 0, 1) ** 2 * (1 - inset / max(ry, 1e-6))
+        return (c[0] + sx * np.sin(phi) * np.sin(th), c[1] + y, c[2] - sz * np.sin(phi) * np.cos(th))
+
+    if chart is None:
+        chart = Chart(2 * math.pi * max(rx, rz), max(rx, ry) * 2.2, painter, name)
+    outward = lambda q: q - c
+    outer = surface(lambda U, V: pts(U, V, 0.0), segs + 1, rings + 1, chart, ref=outward)
+    inner = surface(lambda U, V: pts(U, V, thick), segs + 1, rings + 1, inner_chart or chart,
+                    ref=lambda q: c - q)
+    # Rim strip joining the two shells.
+    U = np.linspace(0, 1, segs + 1)
+    o = np.column_stack(pts(U, np.zeros_like(U), 0.0))
+    i_ = np.column_stack(pts(U, np.zeros_like(U), thick))
+    rv = np.vstack([o, i_])
+    rf = grid_faces(2, segs + 1)
+    ruv = np.column_stack([np.r_[U, U], np.r_[np.zeros(segs + 1), np.full(segs + 1, 0.02)]])
+    rim_p = Piece(rv, rf, ruv, chart)
+    mid = (o + i_) / 2
+    down = lambda q: (q - c) * [1, 0, 1] * 0.2 + [0, -1, 0]
+    rim_p.orient(down)
+    return [merge_pieces([outer, rim_p]), inner]
+
+
+def crown_band(R, height, thick=0.035, segs=96, chart=None, painter=None, flare=0.0, base=0.0, name="band"):
+    """A crown/circlet band around Y. height(theta) gives the top edge (so points, arches and
+    peaks are just a function); flare widens the band toward the top. theta = 0 faces -Z."""
+    th = np.linspace(0, 2 * math.pi, segs + 1)
+    H = np.maximum(np.asarray(height(th), float), 1e-3)
+    hmax = H.max()
+    if chart is None:
+        chart = Chart(2 * math.pi * R, hmax, painter, name)
+
+    def ring(y, r):
+        return np.column_stack([r * np.sin(th), np.full_like(th, 0) + y, -r * np.cos(th)])
+
+    rows_o, rows_i, uvs = [], [], []
+    fr = [0.0, 0.5, 1.0]
+    for f in fr:
+        y = base + H * f
+        ro, ri = R + thick / 2 + flare * H * f, R - thick / 2 + flare * H * f
+        rows_o.append(np.column_stack([ro * np.sin(th), y, -ro * np.cos(th)]))
+        rows_i.append(np.column_stack([ri * np.sin(th), y, -ri * np.cos(th)]))
+        uvs.append(np.column_stack([th / (2 * math.pi), 1 - H * f / hmax]))
+    out_dir = lambda q: q * [1, 0, 1]
+    outer = Piece(np.vstack(rows_o), grid_faces(3, segs + 1), np.vstack(uvs), chart).orient(out_dir)
+    inner = Piece(np.vstack(rows_i), grid_faces(3, segs + 1), np.vstack(uvs), chart).orient(lambda q: -out_dir(q))
+    top = Piece(np.vstack([rows_o[-1], rows_i[-1]]), grid_faces(2, segs + 1), np.vstack([uvs[-1], uvs[-1]]), chart)
+    top.orient(lambda q: np.tile([0, 1.0, 0], (len(q), 1)))
+    bot = Piece(np.vstack([rows_o[0], rows_i[0]]), grid_faces(2, segs + 1), np.vstack([uvs[0], uvs[0]]), chart)
+    bot.orient(lambda q: np.tile([0, -1.0, 0], (len(q), 1)))
+    return merge_pieces([outer, inner, top, bot])
+
+
+def cylinder_wrap(R, front=-1):
+    """Deform: wrap a flat XY shape (thickness on Z) around a vertical cylinder of radius R,
+    with its centre at the front (front=-1 -> -Z)."""
+    def fn(v):
+        a = v[:, 0] / R
+        r = R - front * v[:, 2]
+        return np.column_stack([r * np.sin(a), v[:, 1], front * r * np.cos(a)])
+    return fn
+
 def gem(kind="brilliant", size=(0.1, 0.1, 0.06), chart=None, painter=None, n=8, name="gem"):
     """Faceted, flat-shaded gem. Each facet samples a different shade of the gem chart, which
     reads as sparkle even under flat lighting."""
@@ -360,6 +470,19 @@ def gem(kind="brilliant", size=(0.1, 0.1, 0.06), chart=None, painter=None, n=8, 
         pts = np.vstack([ring + [0, -0.55, 0], ring + [0, 0.55, 0], [[0, -1, 0], [0, 1, 0]]])
     elif kind == "octa":             # diamond-shaped inlay / lozenge
         pts = np.array([[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1.0]])
+    elif kind == "cabochon":         # smooth dome (moonstone, opal); not faceted
+        a = np.linspace(0, math.pi / 2, 7)
+        prof = [(0.0, 0.0)] + [(math.cos(t), math.sin(t)) for t in a]
+        if chart is None:
+            chart = Chart(0.2, 0.2, painter, name)
+        return lathe([(r * size[0], h * size[2]) for r, h in prof], chart, segs=20, sz=size[1] / size[0]) \
+            .rot([1, 0, 0], 90)
+    elif kind == "heart":
+        t = np.linspace(0, 2 * math.pi, 24, endpoint=False)
+        x, y = 16 * np.sin(t) ** 3, 13 * np.cos(t) - 5 * np.cos(2 * t) - 2 * np.cos(3 * t) - np.cos(4 * t)
+        ring = np.column_stack([x / 17, y / 17, np.zeros_like(t)])
+        pts = np.vstack([ring * [1, 1, 0] + [0, 0, 0.0], ring * 0.6 + [0, 0, 0.6], ring * 0.55 + [0, 0, -0.5],
+                         [[0, 0.05, 0.75], [0, 0.05, -0.7]]])
     elif kind == "bipyramid":        # long double-terminated crystal along +Y
         a = np.linspace(0, 2 * math.pi, n, endpoint=False)
         pts = np.vstack([np.column_stack([np.cos(a), np.full(n, 0.0), np.sin(a)]), [[0, 1, 0], [0, -1, 0]]])
@@ -372,7 +495,9 @@ def gem(kind="brilliant", size=(0.1, 0.1, 0.06), chart=None, painter=None, n=8, 
     u = rng.uniform(0.05, 0.95, len(hull.faces))
     uv = np.repeat(np.column_stack([u, np.full(len(u), 0.5)]), 3, axis=0)
     v = hull.vertices[hull.faces].reshape(-1, 3)
-    return Piece(v, np.arange(len(v)).reshape(-1, 3), uv, chart)
+    p = Piece(v, np.arange(len(v)).reshape(-1, 3), uv, chart)
+    p.smooth_deg = 0.0
+    return p
 
 
 # =============================================================== textures
@@ -569,6 +694,213 @@ class P:
             col = np.clip(color[None, None, :] * shade[None, :, None] + 0.25 * (shade[None, :, None] > 1.25), 0, 1)
             col = np.broadcast_to(col, (nv, nu, 3)).copy()
             return layers(nu, nv, col, 0.0, 0.04, emit=col * 0.18)
+        return paint
+
+    @staticmethod
+    def potion(liquid, fill=0.6, glass=None, glow=0.45, bubbles=True, swirl=0.0, sparkle=0.0,
+               label=None, label_band=(0.3, 0.5), seed=0, deep=None):
+        """Stylized glass bottle for lathe charts (u around, v from the bottom centre up the
+        profile). Opaque on purpose (cheap, no sorting issues): liquid below `fill`, tinted glass
+        above it, painted highlight streaks. label: fn(img_L, nu, nv) drawing onto a label band."""
+        liquid = np.asarray(liquid, float)
+        deep = liquid * 0.35 if deep is None else np.asarray(deep, float)
+        glass = (np.clip(0.48 + 0.16 * liquid, 0, 1) * [0.92, 0.98, 1.0]) if glass is None else np.asarray(glass, float)
+
+        def paint(nu, nv, su, sv):
+            ppu = nu / su
+            vv, uu = np.mgrid[0:nv, 0:nu]
+            u, v = (uu + 0.5) / nu, (vv + 0.5) / nv
+            depth = np.clip(v / max(fill, 1e-3), 0, 1)
+            n = noise(nv, nu, 0.08 * ppu, octaves=3, seed=seed)
+            sw = 0.5 + 0.5 * np.sin((u * 2 * math.pi * 3 + v * 9 + n * 4))
+            liq = deep[None, None] * (1 - depth[..., None] ** 0.8) + liquid[None, None] * depth[..., None] ** 0.8
+            liq = liq * (1 + swirl * (sw[..., None] - 0.5))
+            inside = (v < fill).astype(float)
+            col = liq * inside[..., None] + glass * (1 - inside[..., None])
+            emit = liquid * glow * (0.35 + 0.65 * depth[..., None]) * inside[..., None]
+            line = np.exp(-((v - fill) / 0.012) ** 2)
+            col = col * (1 - 0.7 * line[..., None]) + np.minimum(liquid * 1.5 + 0.3, 1) * 0.7 * line[..., None]
+            emit += liquid * glow * line[..., None]
+            if bubbles:
+                r = np.random.default_rng(seed + 1)
+                yy, xx = vv.astype(float), uu.astype(float)
+                bub = np.zeros((nv, nu))
+                for _ in range(int(22 * su * sv) + 5):
+                    cx, cy = r.uniform(0, nu), r.uniform(0.05, fill * 0.95) * nv
+                    rad = r.uniform(0.005, 0.012) * ppu
+                    d = np.hypot(xx - cx, yy - cy)
+                    bub = np.maximum(bub, np.exp(-(d / rad) ** 2) * 0.8 + 0.4 * np.exp(-((d - rad) / (0.3 * rad + 0.5)) ** 2))
+                bub = np.clip(bub, 0, 1)
+                col = col * (1 - 0.45 * bub[..., None]) + np.minimum(liquid + 0.45, 1) * 0.45 * bub[..., None]
+                emit += liquid * 0.4 * bub[..., None]
+            if sparkle:
+                r = np.random.default_rng(seed + 2)
+                sp = np.zeros((nv, nu))
+                for _ in range(int(120 * sparkle * su * sv) + 4):
+                    cx, cy = r.integers(0, nu), r.uniform(0, fill) * nv
+                    sp[int(cy) % nv, cx] = 1
+                sp = gaussian_filter(sp, 0.9) * 6
+                col = np.clip(col + sp[..., None], 0, 1)
+                emit += np.clip(sp, 0, 1)[..., None] * 1.2
+            hl = np.exp(-((u - 0.14) / 0.018) ** 2) + 0.6 * np.exp(-((u - 0.2) / 0.006) ** 2) + 0.35 * np.exp(-((u - 0.62) / 0.01) ** 2)
+            hl = hl * smooth(v, 0.05, 0.12)
+            col = col * (1 - 0.55 * hl[..., None]) + 0.55 * hl[..., None]
+            emit += 0.12 * hl[..., None]
+            L = layers(nu, nv, col, 0.0, 0.05 + 0.03 * n, height=0.0003 * n, emit=emit)
+            if label is not None:
+                a, b = label_band
+                band = ((v > a) & (v < b))
+                lab = np.clip(label(nu, nv, u, v, a, b), 0, 1)       # returns (nv, nu, 4) RGBA
+                m = lab[..., 3] * band
+                L["color"] = L["color"] * (1 - m[..., None]) + lab[..., :3] * m[..., None]
+                L["emit"] = L["emit"] * (1 - m[..., None])
+                L["rough"] = L["rough"] * (1 - m) + 0.8 * m
+                L["height"] += 0.002 * m
+            return L
+        return paint
+
+    @staticmethod
+    def velvet(color, seed=0):
+        color = np.asarray(color, float)
+
+        def paint(nu, nv, su, sv):
+            ppu = nu / su
+            n = noise(nv, nu, 0.15 * ppu, octaves=4, seed=seed)
+            fine = noise(nv, nu, 0.006 * ppu, octaves=2, seed=seed + 1)
+            lum = 0.65 + 0.5 * n + 0.1 * fine
+            return layers(nu, nv, color * lum[..., None], 0.0, 0.85, height=0.002 * n + 0.0003 * fine)
+        return paint
+
+    @staticmethod
+    def leather(color, seed=0, stitch=None, rough=0.65):
+        """Leather. stitch: list of ('u'|'v', position) lines of stitching."""
+        color = np.asarray(color, float)
+
+        def paint(nu, nv, su, sv):
+            ppu = nu / su
+            grain = noise(nv, nu, 0.008 * ppu, octaves=3, seed=seed)
+            blotch = noise(nv, nu, 0.25 * ppu, octaves=3, seed=seed + 1)
+            lum = 0.7 + 0.35 * blotch + 0.15 * grain
+            L = layers(nu, nv, color * lum[..., None], 0.0, rough + 0.15 * grain, height=0.0008 * grain)
+            for axis, pos in (stitch or []):
+                vv, uu = np.mgrid[0:nv, 0:nu]
+                u, v = (uu + 0.5) / nu, (vv + 0.5) / nv
+                along, across = (v * sv, u) if axis == 'u' else (u * su, v)
+                dash = (np.sin(along / 0.03 * 2 * math.pi) > 0.3)
+                m = np.exp(-((across - pos) / 0.004) ** 2) * dash
+                L["color"] = L["color"] * (1 - m[..., None]) + np.array([0.85, 0.75, 0.55]) * m[..., None]
+                L["height"] += 0.002 * m
+            return L
+        return paint
+
+    @staticmethod
+    def scales(color, tip=None, size=0.06, metal=0.6, rough=0.3, seed=0, glow=None):
+        """Overlapping dragon/fish scales; rows run along u, each row offset by half a scale."""
+        color = np.asarray(color, float)
+        tip = np.minimum(color * 1.6 + 0.1, 1) if tip is None else np.asarray(tip, float)
+
+        def paint(nu, nv, su, sv):
+            ppu = nu / su
+            vv, uu = np.mgrid[0:nv, 0:nu]
+            x, y = uu / ppu / size, vv / ppu / size / 0.75
+            row = np.floor(y)
+            x2 = x + 0.5 * (row % 2)
+            fx, fy = x2 - np.floor(x2) - 0.5, y - row
+            d = np.hypot(fx, fy * 1.1)
+            inside = d < 0.62
+            h = np.clip(1 - d / 0.62, 0, 1) * fy
+            g = np.clip(fy, 0, 1)
+            col = color * (0.55 + 0.45 * (1 - g))[..., None] + (tip - color) * (g ** 2 * inside)[..., None] * 0.8
+            edge = np.exp(-((d - 0.6) / 0.05) ** 2)
+            col = col * (1 - 0.5 * edge[..., None])
+            emit = np.zeros((nv, nu, 3)) if glow is None else np.asarray(glow) * (edge * 0.8)[..., None]
+            return layers(nu, nv, col, metal, rough + 0.2 * edge, height=0.004 * h - 0.001 * edge, emit=emit)
+        return paint
+
+    @staticmethod
+    def chain(color, link=0.06, metal=0.9, rough=0.25):
+        """Chain links painted onto a thin tube (u around, v along): cheap stand-in for real links."""
+        color = np.asarray(color, float)
+
+        def paint(nu, nv, su, sv):
+            vv, uu = np.mgrid[0:nv, 0:nu]
+            u, v = (uu + 0.5) / nu, (vv + 0.5) / nv * sv
+            k = np.floor(v / link)
+            f = v / link - k
+            ring = np.sin(math.pi * f) ** 0.5
+            face = (k % 2 == 0)
+            slot = face * np.exp(-((f - 0.5) / 0.22) ** 2) * (np.exp(-((u % 0.5 - 0.25) / 0.09) ** 2))
+            gap = np.exp(-(np.minimum(f, 1 - f) / 0.06) ** 2)
+            h = 0.004 * ring * (1 - slot) - 0.003 * gap
+            col = color * (0.6 + 0.4 * ring - 0.5 * slot - 0.4 * gap)[..., None]
+            return layers(nu, nv, col, metal, rough + 0.3 * gap, height=h)
+        return paint
+
+    @staticmethod
+    def feather(color, tip=None, seed=0, barb=0.02, metal=0.0, rough=0.7, glow=None):
+        """Feather/plume art for planar (pillow) charts: rachis up the middle (u=0.5)."""
+        color = np.asarray(color, float)
+        tip = color * 1.4 if tip is None else np.asarray(tip, float)
+
+        def paint(nu, nv, su, sv):
+            ppu = nu / su
+            vv, uu = np.mgrid[0:nv, 0:nu]
+            u, v = (uu + 0.5) / nu, (vv + 0.5) / nv
+            du = (u - 0.5) * su
+            barbs = 0.5 + 0.5 * np.sin((v * sv + np.abs(du) * 0.8) / barb * 2 * math.pi + noise(nv, nu, 0.05 * ppu, seed=seed) * 3)
+            rachis = np.exp(-(du / 0.006) ** 2)
+            g = 1 - v
+            col = color * (1 - g[..., None]) + tip * g[..., None]
+            col = col * (0.75 + 0.25 * barbs)[..., None] * (1 - 0.3 * rachis[..., None]) + 0.25 * rachis[..., None]
+            emit = np.zeros((nv, nu, 3)) if glow is None else np.asarray(glow) * (g ** 2 * 0.6)[..., None]
+            return layers(nu, nv, col, metal, rough, height=0.0015 * barbs + 0.002 * rachis, emit=emit)
+        return paint
+
+    @staticmethod
+    def hair(color, seed=0, glow=None):
+        """Horsehair/plume strands running along v."""
+        color = np.asarray(color, float)
+
+        def paint(nu, nv, su, sv):
+            ppu = nu / su
+            strands = noise(nv, nu, 0.004 * ppu, 0.3 * ppu, octaves=3, seed=seed)
+            clump = noise(nv, nu, 0.05 * ppu, 0.5 * ppu, octaves=2, seed=seed + 1)
+            lum = 0.5 + 0.5 * strands * (0.6 + 0.4 * clump)
+            emit = np.zeros((nv, nu, 3)) if glow is None else np.asarray(glow) * (strands ** 3)[..., None]
+            return layers(nu, nv, color * lum[..., None], 0.0, 0.6, height=0.002 * strands, emit=emit)
+        return paint
+
+    @staticmethod
+    def moonstone(base=(0.62, 0.72, 0.9), sheen=(0.35, 0.6, 1.0), seed=0):
+        base, sheen = np.asarray(base, float), np.asarray(sheen, float)
+
+        def paint(nu, nv, su, sv):
+            vv, uu = np.mgrid[0:nv, 0:nu]
+            u, v = (uu + 0.5) / nu, (vv + 0.5) / nv
+            n = noise(nv, nu, max(nu, nv) * 0.3, octaves=3, seed=seed)
+            g = np.clip(1 - np.hypot(u - 0.4, v - 0.35) * 1.4, 0, 1) * (0.6 + 0.4 * n)
+            col = base * (1 - 0.7 * g[..., None]) + sheen * 0.7 * g[..., None]
+            return layers(nu, nv, col * 0.85, 0.0, 0.08, emit=sheen * 0.45 * g[..., None])
+        return paint
+
+    @staticmethod
+    def enamel(color, rough=0.15, seed=0, glow=0.0):
+        color = np.asarray(color, float)
+
+        def paint(nu, nv, su, sv):
+            n = noise(nv, nu, max(nu, nv) * 0.25, octaves=3, seed=seed)
+            col = color * (0.85 + 0.25 * n)[..., None]
+            return layers(nu, nv, col, 0.0, rough, emit=col * glow)
+        return paint
+
+    @staticmethod
+    def cork(seed=0):
+        def paint(nu, nv, su, sv):
+            ppu = nu / su
+            n = noise(nv, nu, 0.01 * ppu, octaves=3, seed=seed)
+            pits = (noise(nv, nu, 0.006 * ppu, octaves=1, seed=seed + 1) > 0.78).astype(float)
+            col = np.array([0.72, 0.52, 0.32]) * (0.75 + 0.35 * n - 0.35 * pits)[..., None]
+            return layers(nu, nv, col, 0.0, 0.85, height=0.0015 * n - 0.002 * pits)
         return paint
 
     @staticmethod

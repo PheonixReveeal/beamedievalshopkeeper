@@ -1,0 +1,1212 @@
+{
+ "Crossbow": {
+  "name": "Crossbow",
+  "tris": 2104,
+  "verts": 1721,
+  "density": 625,
+  "bbox_min": [
+   -0.964,
+   -0.29,
+   -1.886
+  ],
+  "bbox_max": [
+   0.964,
+   0.283,
+   1.0
+  ],
+  "grip_offset": [
+   -0.0,
+   0.004,
+   0.443
+  ],
+  "category": "Crossbows"
+ },
+ "HuntersCrossbow": {
+  "name": "HuntersCrossbow",
+  "tris": 2360,
+  "verts": 1941,
+  "density": 410,
+  "bbox_min": [
+   -1.12,
+   -0.29,
+   -1.8
+  ],
+  "bbox_max": [
+   1.12,
+   0.283,
+   1.0
+  ],
+  "grip_offset": [
+   -0.0,
+   0.004,
+   0.4
+  ],
+  "category": "Crossbows"
+ },
+ "SiegeCrossbow": {
+  "name": "SiegeCrossbow",
+  "tris": 3560,
+  "verts": 2976,
+  "density": 513,
+  "bbox_min": [
+   -1.318,
+   -0.29,
+   -2.493
+  ],
+  "bbox_max": [
+   1.318,
+   0.38,
+   1.305
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.045,
+   0.594
+  ],
+  "category": "Crossbows"
+ },
+ "RepeatingCrossbow": {
+  "name": "RepeatingCrossbow",
+  "tris": 1968,
+  "verts": 1727,
+  "density": 590,
+  "bbox_min": [
+   -0.863,
+   -0.29,
+   -1.65
+  ],
+  "bbox_max": [
+   0.863,
+   0.49,
+   1.0
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.1,
+   0.325
+  ],
+  "category": "Crossbows"
+ },
+ "DragonbaneArbalest": {
+  "name": "DragonbaneArbalest",
+  "tris": 2820,
+  "verts": 2672,
+  "density": 434,
+  "bbox_min": [
+   -1.444,
+   -0.29,
+   -2.1
+  ],
+  "bbox_max": [
+   1.444,
+   0.403,
+   1.068
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.056,
+   0.516
+  ],
+  "category": "Crossbows"
+ },
+ "Shield": {
+  "name": "Shield",
+  "tris": 3888,
+  "verts": 2726,
+  "density": 232,
+  "bbox_min": [
+   -1.223,
+   -1.173,
+   -0.46
+  ],
+  "bbox_max": [
+   1.223,
+   1.273,
+   0.033
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.05,
+   0.213
+  ],
+  "category": "Shields"
+ },
+ "OakBuckler": {
+  "name": "OakBuckler",
+  "tris": 3284,
+  "verts": 2225,
+  "density": 290,
+  "bbox_min": [
+   -0.803,
+   -0.753,
+   -0.61
+  ],
+  "bbox_max": [
+   0.803,
+   0.853,
+   0.033
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.05,
+   0.288
+  ],
+  "category": "Shields"
+ },
+ "WardensShield": {
+  "name": "WardensShield",
+  "tris": 3908,
+  "verts": 2693,
+  "density": 219,
+  "bbox_min": [
+   -0.917,
+   -1.723,
+   -0.324
+  ],
+  "bbox_max": [
+   0.917,
+   1.823,
+   0.061
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.05,
+   0.131
+  ],
+  "category": "Shields"
+ },
+ "SunburstShield": {
+  "name": "SunburstShield",
+  "tris": 3864,
+  "verts": 2642,
+  "density": 232,
+  "bbox_min": [
+   -1.218,
+   -1.168,
+   -0.38
+  ],
+  "bbox_max": [
+   1.218,
+   1.268,
+   0.033
+  ],
+  "grip_offset": [
+   0.0,
+   -0.05,
+   0.173
+  ],
+  "category": "Shields"
+ },
+ "DragonscaleAegis": {
+  "name": "DragonscaleAegis",
+  "tris": 4428,
+  "verts": 2884,
+  "density": 210,
+  "bbox_min": [
+   -1.264,
+   -1.408,
+   -0.356
+  ],
+  "bbox_max": [
+   1.264,
+   1.548,
+   0.096
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.07,
+   0.13
+  ],
+  "category": "Shields"
+ },
+ "RoyalShield": {
+  "name": "RoyalShield",
+  "tris": 3112,
+  "verts": 1954,
+  "density": 219,
+  "bbox_min": [
+   -1.067,
+   -1.298,
+   -0.313
+  ],
+  "bbox_max": [
+   1.067,
+   1.398,
+   0.048
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.05,
+   0.133
+  ],
+  "category": "Shields"
+ },
+ "PolishedRoyalShield": {
+  "name": "PolishedRoyalShield",
+  "tris": 3250,
+  "verts": 2368,
+  "density": 219,
+  "bbox_min": [
+   -1.072,
+   -1.303,
+   -0.313
+  ],
+  "bbox_max": [
+   1.072,
+   1.403,
+   0.053
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.05,
+   0.13
+  ],
+  "category": "Shields"
+ },
+ "KingsguardRoyalShield": {
+  "name": "KingsguardRoyalShield",
+  "tris": 4846,
+  "verts": 3594,
+  "density": 219,
+  "bbox_min": [
+   -1.23,
+   -1.308,
+   -0.301
+  ],
+  "bbox_max": [
+   1.23,
+   1.408,
+   0.057
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.05,
+   0.122
+  ],
+  "category": "Shields"
+ },
+ "SunwardRoyalShield": {
+  "name": "SunwardRoyalShield",
+  "tris": 4114,
+  "verts": 3092,
+  "density": 232,
+  "bbox_min": [
+   -1.076,
+   -1.308,
+   -0.313
+  ],
+  "bbox_max": [
+   1.076,
+   1.408,
+   0.057
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.05,
+   0.128
+  ],
+  "category": "Shields"
+ },
+ "SovereignRoyalShield": {
+  "name": "SovereignRoyalShield",
+  "tris": 6306,
+  "verts": 5878,
+  "density": 219,
+  "bbox_min": [
+   -1.717,
+   -1.318,
+   -0.314
+  ],
+  "bbox_max": [
+   1.717,
+   1.903,
+   0.066
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.292,
+   0.124
+  ],
+  "category": "Shields"
+ },
+ "Helmet": {
+  "name": "Helmet",
+  "tris": 3420,
+  "verts": 2444,
+  "density": 416,
+  "bbox_min": [
+   -0.744,
+   -0.326,
+   -0.809
+  ],
+  "bbox_max": [
+   0.744,
+   0.859,
+   0.794
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.266,
+   0.007
+  ],
+  "category": "Helmets"
+ },
+ "ScoutsCap": {
+  "name": "ScoutsCap",
+  "tris": 2252,
+  "verts": 1508,
+  "density": 454,
+  "bbox_min": [
+   -0.74,
+   -0.36,
+   -0.853
+  ],
+  "bbox_max": [
+   0.99,
+   0.71,
+   0.719
+  ],
+  "grip_offset": [
+   -0.125,
+   -0.175,
+   0.067
+  ],
+  "category": "Helmets"
+ },
+ "KnightsVisor": {
+  "name": "KnightsVisor",
+  "tris": 4732,
+  "verts": 2843,
+  "density": 274,
+  "bbox_min": [
+   -0.76,
+   -0.55,
+   -0.9
+  ],
+  "bbox_max": [
+   0.76,
+   1.381,
+   0.969
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.416,
+   -0.035
+  ],
+  "category": "Helmets"
+ },
+ "EmberHelm": {
+  "name": "EmberHelm",
+  "tris": 4002,
+  "verts": 2556,
+  "density": 329,
+  "bbox_min": [
+   -1.066,
+   -0.455,
+   -0.788
+  ],
+  "bbox_max": [
+   1.066,
+   1.11,
+   0.76
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.327,
+   0.014
+  ],
+  "category": "Helmets"
+ },
+ "ChampionsHelm": {
+  "name": "ChampionsHelm",
+  "tris": 4578,
+  "verts": 2984,
+  "density": 299,
+  "bbox_min": [
+   -0.873,
+   -0.497,
+   -0.82
+  ],
+  "bbox_max": [
+   0.873,
+   1.05,
+   1.039
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.276,
+   -0.109
+  ],
+  "category": "Helmets"
+ },
+ "Ring": {
+  "name": "Ring",
+  "tris": 1478,
+  "verts": 1024,
+  "density": 902,
+  "bbox_min": [
+   -0.275,
+   -0.27,
+   -0.065
+  ],
+  "bbox_max": [
+   0.276,
+   0.343,
+   0.065
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.036,
+   -0.0
+  ],
+  "category": "Rings"
+ },
+ "SapphireBand": {
+  "name": "SapphireBand",
+  "tris": 1898,
+  "verts": 1972,
+  "density": 902,
+  "bbox_min": [
+   -0.277,
+   -0.274,
+   -0.08
+  ],
+  "bbox_max": [
+   0.278,
+   0.363,
+   0.08
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.045,
+   -0.0
+  ],
+  "category": "Rings"
+ },
+ "MoonstoneRing": {
+  "name": "MoonstoneRing",
+  "tris": 2048,
+  "verts": 1686,
+  "density": 696,
+  "bbox_min": [
+   -0.272,
+   -0.269,
+   -0.096
+  ],
+  "bbox_max": [
+   0.272,
+   0.345,
+   0.096
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.038,
+   -0.0
+  ],
+  "category": "Rings"
+ },
+ "EmberheartRing": {
+  "name": "EmberheartRing",
+  "tris": 2868,
+  "verts": 1894,
+  "density": 488,
+  "bbox_min": [
+   -0.278,
+   -0.274,
+   -0.091
+  ],
+  "bbox_max": [
+   0.279,
+   0.418,
+   0.091
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.072,
+   -0.0
+  ],
+  "category": "Rings"
+ },
+ "RingOfKings": {
+  "name": "RingOfKings",
+  "tris": 2082,
+  "verts": 2076,
+  "density": 680,
+  "bbox_min": [
+   -0.297,
+   -0.29,
+   -0.119
+  ],
+  "bbox_max": [
+   0.298,
+   0.394,
+   0.119
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.052,
+   -0.0
+  ],
+  "category": "Rings"
+ },
+ "Amulet": {
+  "name": "Amulet",
+  "tris": 1930,
+  "verts": 1316,
+  "density": 443,
+  "bbox_min": [
+   -0.266,
+   -0.233,
+   -0.058
+  ],
+  "bbox_max": [
+   0.266,
+   1.635,
+   0.058
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.701,
+   -0.0
+  ],
+  "category": "Amulets"
+ },
+ "LuckyCharm": {
+  "name": "LuckyCharm",
+  "tris": 3382,
+  "verts": 2334,
+  "density": 610,
+  "bbox_min": [
+   -0.272,
+   -0.221,
+   -0.058
+  ],
+  "bbox_max": [
+   0.272,
+   1.607,
+   0.058
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.693,
+   -0.0
+  ],
+  "category": "Amulets"
+ },
+ "OwlEyeAmulet": {
+  "name": "OwlEyeAmulet",
+  "tris": 2724,
+  "verts": 2070,
+  "density": 443,
+  "bbox_min": [
+   -0.266,
+   -0.251,
+   -0.094
+  ],
+  "bbox_max": [
+   0.266,
+   1.56,
+   0.058
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.655,
+   0.018
+  ],
+  "category": "Amulets"
+ },
+ "WyrmscaleAmulet": {
+  "name": "WyrmscaleAmulet",
+  "tris": 2046,
+  "verts": 1412,
+  "density": 425,
+  "bbox_min": [
+   -0.266,
+   -0.293,
+   -0.093
+  ],
+  "bbox_max": [
+   0.266,
+   1.64,
+   0.058
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.674,
+   0.017
+  ],
+  "category": "Amulets"
+ },
+ "HeartOfTheSun": {
+  "name": "HeartOfTheSun",
+  "tris": 2900,
+  "verts": 2726,
+  "density": 443,
+  "bbox_min": [
+   -0.296,
+   -0.296,
+   -0.07
+  ],
+  "bbox_max": [
+   0.271,
+   1.67,
+   0.058
+  ],
+  "grip_offset": [
+   0.013,
+   -0.687,
+   0.006
+  ],
+  "category": "Amulets"
+ },
+ "StarAmulet": {
+  "name": "StarAmulet",
+  "tris": 1248,
+  "verts": 784,
+  "density": 886,
+  "bbox_min": [
+   -0.272,
+   -0.178,
+   -0.058
+  ],
+  "bbox_max": [
+   0.272,
+   1.632,
+   0.058
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.727,
+   -0.0
+  ],
+  "category": "Amulets"
+ },
+ "PolishedStarAmulet": {
+  "name": "PolishedStarAmulet",
+  "tris": 1064,
+  "verts": 720,
+  "density": 542,
+  "bbox_min": [
+   -0.266,
+   -0.186,
+   -0.058
+  ],
+  "bbox_max": [
+   0.266,
+   1.635,
+   0.058
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.725,
+   -0.0
+  ],
+  "category": "Amulets"
+ },
+ "MoonstoneStarAmulet": {
+  "name": "MoonstoneStarAmulet",
+  "tris": 1956,
+  "verts": 1366,
+  "density": 542,
+  "bbox_min": [
+   -0.266,
+   -0.27,
+   -0.065
+  ],
+  "bbox_max": [
+   0.3,
+   1.615,
+   0.058
+  ],
+  "grip_offset": [
+   -0.017,
+   -0.673,
+   0.004
+  ],
+  "category": "Amulets"
+ },
+ "CelestialStarAmulet": {
+  "name": "CelestialStarAmulet",
+  "tris": 2186,
+  "verts": 2064,
+  "density": 437,
+  "bbox_min": [
+   -0.3,
+   -0.3,
+   -0.071
+  ],
+  "bbox_max": [
+   0.3,
+   1.705,
+   0.06
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.703,
+   0.005
+  ],
+  "category": "Amulets"
+ },
+ "NorthStarAmulet": {
+  "name": "NorthStarAmulet",
+  "tris": 3738,
+  "verts": 3078,
+  "density": 467,
+  "bbox_min": [
+   -0.266,
+   -0.26,
+   -0.08
+  ],
+  "bbox_max": [
+   0.266,
+   1.76,
+   0.065
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.75,
+   0.008
+  ],
+  "category": "Amulets"
+ },
+ "Goblet": {
+  "name": "Goblet",
+  "tris": 1200,
+  "verts": 700,
+  "density": 3000,
+  "bbox_min": [
+   -0.288,
+   0.0,
+   -0.288
+  ],
+  "bbox_max": [
+   0.288,
+   0.962,
+   0.288
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.481,
+   -0.0
+  ],
+  "category": "Goblets"
+ },
+ "FeastGoblet": {
+  "name": "FeastGoblet",
+  "tris": 2000,
+  "verts": 1459,
+  "density": 162,
+  "bbox_min": [
+   -0.388,
+   0.0,
+   -0.388
+  ],
+  "bbox_max": [
+   0.388,
+   1.012,
+   0.388
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.506,
+   -0.0
+  ],
+  "category": "Goblets"
+ },
+ "MoonlitGoblet": {
+  "name": "MoonlitGoblet",
+  "tris": 2478,
+  "verts": 2131,
+  "density": 248,
+  "bbox_min": [
+   -0.278,
+   0.0,
+   -0.278
+  ],
+  "bbox_max": [
+   0.278,
+   1.262,
+   0.278
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.631,
+   -0.0
+  ],
+  "category": "Goblets"
+ },
+ "RoyalChalice": {
+  "name": "RoyalChalice",
+  "tris": 2140,
+  "verts": 2025,
+  "density": 170,
+  "bbox_min": [
+   -0.328,
+   0.0,
+   -0.328
+  ],
+  "bbox_max": [
+   0.328,
+   1.062,
+   0.328
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.531,
+   -0.0
+  ],
+  "category": "Goblets"
+ },
+ "GrailOfAges": {
+  "name": "GrailOfAges",
+  "tris": 2630,
+  "verts": 1775,
+  "density": 162,
+  "bbox_min": [
+   -0.465,
+   0.0,
+   -0.363
+  ],
+  "bbox_max": [
+   0.465,
+   1.012,
+   0.358
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.506,
+   0.003
+  ],
+  "category": "Goblets"
+ },
+ "Crown": {
+  "name": "Crown",
+  "tris": 2124,
+  "verts": 2363,
+  "density": 796,
+  "bbox_min": [
+   -0.654,
+   0.31,
+   -0.698
+  ],
+  "bbox_max": [
+   0.654,
+   0.79,
+   0.698
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.55,
+   -0.0
+  ],
+  "category": "Crowns"
+ },
+ "SilverCirclet": {
+  "name": "SilverCirclet",
+  "tris": 2574,
+  "verts": 2716,
+  "density": 822,
+  "bbox_min": [
+   -0.638,
+   0.22,
+   -0.672
+  ],
+  "bbox_max": [
+   0.638,
+   0.58,
+   0.638
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.4,
+   0.017
+  ],
+  "category": "Crowns"
+ },
+ "JeweledCrown": {
+  "name": "JeweledCrown",
+  "tris": 4560,
+  "verts": 5035,
+  "density": 371,
+  "bbox_min": [
+   -0.69,
+   0.26,
+   -0.69
+  ],
+  "bbox_max": [
+   0.69,
+   1.22,
+   0.69
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.74,
+   -0.0
+  ],
+  "category": "Crowns"
+ },
+ "FrostQueensCrown": {
+  "name": "FrostQueensCrown",
+  "tris": 2214,
+  "verts": 3682,
+  "density": 950,
+  "bbox_min": [
+   -0.68,
+   0.32,
+   -0.73
+  ],
+  "bbox_max": [
+   0.68,
+   0.889,
+   0.688
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.605,
+   0.021
+  ],
+  "category": "Crowns"
+ },
+ "DragonCrown": {
+  "name": "DragonCrown",
+  "tris": 3352,
+  "verts": 2560,
+  "density": 617,
+  "bbox_min": [
+   -0.765,
+   0.3,
+   -0.665
+  ],
+  "bbox_max": [
+   0.765,
+   0.744,
+   0.65
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.522,
+   0.008
+  ],
+  "category": "Crowns"
+ },
+ "Potion": {
+  "name": "Potion",
+  "tris": 1664,
+  "verts": 1023,
+  "density": 296,
+  "bbox_min": [
+   -0.339,
+   0.0,
+   -0.339
+  ],
+  "bbox_max": [
+   0.339,
+   1.005,
+   0.339
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.502,
+   -0.0
+  ],
+  "category": "Potions"
+ },
+ "HealersDraught": {
+  "name": "HealersDraught",
+  "tris": 1964,
+  "verts": 1309,
+  "density": 298,
+  "bbox_min": [
+   -0.28,
+   0.0,
+   -0.28
+  ],
+  "bbox_max": [
+   0.28,
+   1.0,
+   0.28
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.5,
+   -0.0
+  ],
+  "category": "Potions"
+ },
+ "SwiftfootTonic": {
+  "name": "SwiftfootTonic",
+  "tris": 1118,
+  "verts": 858,
+  "density": 276,
+  "bbox_min": [
+   -0.33,
+   0.0,
+   -0.177
+  ],
+  "bbox_max": [
+   0.33,
+   1.274,
+   0.177
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.637,
+   -0.0
+  ],
+  "category": "Potions"
+ },
+ "GiantsStrengthBrew": {
+  "name": "GiantsStrengthBrew",
+  "tris": 2124,
+  "verts": 1626,
+  "density": 230,
+  "bbox_min": [
+   -0.456,
+   0.0,
+   -0.456
+  ],
+  "bbox_max": [
+   0.522,
+   1.125,
+   0.456
+  ],
+  "grip_offset": [
+   -0.033,
+   -0.562,
+   -0.0
+  ],
+  "category": "Potions"
+ },
+ "PhoenixTears": {
+  "name": "PhoenixTears",
+  "tris": 1694,
+  "verts": 1228,
+  "density": 264,
+  "bbox_min": [
+   -0.448,
+   0.0,
+   -0.267
+  ],
+  "bbox_max": [
+   0.448,
+   1.23,
+   0.267
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.615,
+   -0.0
+  ],
+  "category": "Potions"
+ },
+ "Elixir": {
+  "name": "Elixir",
+  "tris": 794,
+  "verts": 634,
+  "density": 360,
+  "bbox_min": [
+   -0.128,
+   0.0,
+   -0.128
+  ],
+  "bbox_max": [
+   0.128,
+   1.332,
+   0.128
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.666,
+   -0.0
+  ],
+  "category": "Elixirs"
+ },
+ "ElixirOfClarity": {
+  "name": "ElixirOfClarity",
+  "tris": 246,
+  "verts": 588,
+  "density": 282,
+  "bbox_min": [
+   -0.24,
+   0.0,
+   -0.24
+  ],
+  "bbox_max": [
+   0.24,
+   1.058,
+   0.24
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.529,
+   -0.0
+  ],
+  "category": "Elixirs"
+ },
+ "MoonwellElixir": {
+  "name": "MoonwellElixir",
+  "tris": 1498,
+  "verts": 1082,
+  "density": 279,
+  "bbox_min": [
+   -0.309,
+   0.0,
+   -0.325
+  ],
+  "bbox_max": [
+   0.309,
+   1.093,
+   0.306
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.546,
+   0.009
+  ],
+  "category": "Elixirs"
+ },
+ "ElixirOfAges": {
+  "name": "ElixirOfAges",
+  "tris": 1796,
+  "verts": 1507,
+  "density": 227,
+  "bbox_min": [
+   -0.3,
+   -0.03,
+   -0.3
+  ],
+  "bbox_max": [
+   0.3,
+   1.121,
+   0.3
+  ],
+  "grip_offset": [
+   -0.0,
+   -0.546,
+   -0.0
+  ],
+  "category": "Elixirs"
+ },
+ "StarlightElixir": {
+  "name": "StarlightElixir",
+  "tris": 1210,
+  "verts": 1043,
+  "density": 250,
+  "bbox_min": [
+   -0.215,
+   -0.02,
+   -0.238
+  ],
+  "bbox_max": [
+   0.25,
+   1.38,
+   0.238
+  ],
+  "grip_offset": [
+   -0.018,
+   -0.68,
+   -0.0
+  ],
+  "category": "Elixirs"
+ }
+}
