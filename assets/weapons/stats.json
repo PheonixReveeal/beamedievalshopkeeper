@@ -1,0 +1,254 @@
+{
+ "BronzeGladius": {
+  "name": "BronzeGladius",
+  "tris": 1536,
+  "verts": 1192,
+  "density": 666,
+  "bbox_min": [
+   -0.29,
+   -0.58,
+   -0.117
+  ],
+  "bbox_max": [
+   0.29,
+   2.7,
+   0.117
+  ],
+  "grip_offset": [
+   -0.0,
+   -1.06,
+   -0.0
+  ]
+ },
+ "SunsteelFalchion": {
+  "name": "SunsteelFalchion",
+  "tris": 1330,
+  "verts": 1282,
+  "density": 714,
+  "bbox_min": [
+   -0.425,
+   -0.66,
+   -0.11
+  ],
+  "bbox_max": [
+   0.425,
+   2.97,
+   0.11
+  ],
+  "grip_offset": [
+   -0.0,
+   -1.155,
+   -0.0
+  ]
+ },
+ "Frostbrand": {
+  "name": "Frostbrand",
+  "tris": 1344,
+  "verts": 1549,
+  "density": 666,
+  "bbox_min": [
+   -0.46,
+   -0.73,
+   -0.11
+  ],
+  "bbox_max": [
+   0.46,
+   3.45,
+   0.11
+  ],
+  "grip_offset": [
+   -0.0,
+   -1.36,
+   -0.0
+  ]
+ },
+ "TidecrystalShard": {
+  "name": "TidecrystalShard",
+  "tris": 3090,
+  "verts": 3098,
+  "density": 666,
+  "bbox_min": [
+   -0.47,
+   -0.56,
+   -0.105
+  ],
+  "bbox_max": [
+   0.47,
+   3.49,
+   0.105
+  ],
+  "grip_offset": [
+   -0.0,
+   -1.465,
+   -0.0
+  ]
+ },
+ "Voidrender": {
+  "name": "Voidrender",
+  "tris": 2026,
+  "verts": 1861,
+  "density": 666,
+  "bbox_min": [
+   -0.5,
+   -0.73,
+   -0.096
+  ],
+  "bbox_max": [
+   0.5,
+   3.72,
+   0.096
+  ],
+  "grip_offset": [
+   -0.0,
+   -1.495,
+   -0.0
+  ]
+ },
+ "Emberfang": {
+  "name": "Emberfang",
+  "tris": 2128,
+  "verts": 2320,
+  "density": 666,
+  "bbox_min": [
+   -0.47,
+   -0.65,
+   -0.118
+  ],
+  "bbox_max": [
+   0.47,
+   3.55,
+   0.118
+  ],
+  "grip_offset": [
+   -0.0,
+   -1.45,
+   -0.0
+  ]
+ },
+ "GlacierCleaver": {
+  "name": "GlacierCleaver",
+  "tris": 2416,
+  "verts": 2451,
+  "density": 442,
+  "bbox_min": [
+   -1.108,
+   -0.8,
+   -0.148
+  ],
+  "bbox_max": [
+   1.108,
+   4.2,
+   0.148
+  ],
+  "grip_offset": [
+   -0.0,
+   -1.7,
+   -0.0
+  ]
+ },
+ "DuskforgedWarhammer": {
+  "name": "DuskforgedWarhammer",
+  "tris": 1116,
+  "verts": 2099,
+  "density": 494,
+  "bbox_min": [
+   -1.0,
+   -0.75,
+   -0.311
+  ],
+  "bbox_max": [
+   0.76,
+   4.02,
+   0.311
+  ],
+  "grip_offset": [
+   0.12,
+   -1.635,
+   -0.0
+  ]
+ },
+ "RoyalSapphireScepter": {
+  "name": "RoyalSapphireScepter",
+  "tris": 2944,
+  "verts": 2575,
+  "density": 666,
+  "bbox_min": [
+   -0.394,
+   -0.74,
+   -0.455
+  ],
+  "bbox_max": [
+   0.394,
+   4.88,
+   0.455
+  ],
+  "grip_offset": [
+   -0.0,
+   -2.07,
+   -0.0
+  ]
+ },
+ "ArcaneAmethystStaff": {
+  "name": "ArcaneAmethystStaff",
+  "tris": 3824,
+  "verts": 2726,
+  "density": 580,
+  "bbox_min": [
+   -0.241,
+   -2.15,
+   -0.241
+  ],
+  "bbox_max": [
+   0.241,
+   4.01,
+   0.241
+  ],
+  "grip_offset": [
+   0.0,
+   -0.93,
+   -0.0
+  ]
+ },
+ "GlacierBow": {
+  "name": "GlacierBow",
+  "tris": 1770,
+  "verts": 1730,
+  "density": 769,
+  "bbox_min": [
+   -0.086,
+   -2.5,
+   -0.077
+  ],
+  "bbox_max": [
+   0.323,
+   2.5,
+   0.077
+  ],
+  "grip_offset": [
+   -0.119,
+   -0.0,
+   -0.0
+  ]
+ },
+ "HuntersRecurveBow": {
+  "name": "HuntersRecurveBow",
+  "tris": 1674,
+  "verts": 1442,
+  "density": 769,
+  "bbox_min": [
+   -0.07,
+   -2.25,
+   -0.077
+  ],
+  "bbox_max": [
+   0.285,
+   2.25,
+   0.077
+  ],
+  "grip_offset": [
+   -0.108,
+   -0.0,
+   -0.0
+  ]
+ }
+}

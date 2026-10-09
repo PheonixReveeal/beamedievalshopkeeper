@@ -1,0 +1,50 @@
+<!doctype html><html><body style="margin:0;background:#16181d">
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+<script type="module">
+// Preview renderer. Query: files=a.glb,b.glb  w,h  yaw (deg)  pitch (deg)
+//   focus=y0,y1 (fraction of height to frame, for close-ups)  gap (studs between models)
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+const q = new URLSearchParams(location.search);
+const W = +q.get('w') || 900, H = +q.get('h') || 900;
+const r = new THREE.WebGLRenderer({antialias: true, preserveDrawingBuffer: true});
+r.setPixelRatio(1); r.setSize(W, H);
+r.toneMapping = THREE.ACESFilmicToneMapping; r.toneMappingExposure = 1.05;
+r.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(r.domElement);
+const sc = new THREE.Scene();
+const bg = document.createElement('canvas'); bg.width = 2; bg.height = 256;
+const g = bg.getContext('2d'), grd = g.createLinearGradient(0, 0, 0, 256);
+grd.addColorStop(0, '#2a2f3a'); grd.addColorStop(1, '#101216'); g.fillStyle = grd; g.fillRect(0, 0, 2, 256);
+sc.background = new THREE.CanvasTexture(bg); sc.background.colorSpace = THREE.SRGBColorSpace;
+sc.environment = new THREE.PMREMGenerator(r).fromScene(new RoomEnvironment(), 0.04).texture;
+sc.environmentIntensity = 1.6;
+const key = new THREE.DirectionalLight(0xfff1dd, 2.4); key.position.set(4, 6, 6); sc.add(key);
+const rim = new THREE.DirectionalLight(0x9ec8ff, 1.6); rim.position.set(-6, 3, -5); sc.add(rim);
+const files = q.get('files').split(',');
+const yaw = THREE.MathUtils.degToRad(+(q.get('yaw') ?? 25)), pitch = THREE.MathUtils.degToRad(+(q.get('pitch') ?? 6));
+const gap = +(q.get('gap') ?? 0.6);
+const loader = new GLTFLoader();
+Promise.all(files.map(f => loader.loadAsync(f))).then(gs => {
+  let x = 0; const group = new THREE.Group(); sc.add(group);
+  for (const gl of gs) {
+    const m = gl.scene; m.rotation.y = yaw;
+    const holder = new THREE.Group(); holder.add(m); group.add(holder);
+    const b = new THREE.Box3().setFromObject(holder);
+    holder.position.x = x - b.min.x; holder.position.y = -b.min.y;
+    x += (b.max.x - b.min.x) + gap;
+  }
+  const box = new THREE.Box3().setFromObject(group);
+  let [f0, f1] = (q.get('focus') || '0,1').split(',').map(Number);
+  const size = box.getSize(new THREE.Vector3());
+  const y0 = box.min.y + size.y * f0, y1 = box.min.y + size.y * f1;
+  const ctr = new THREE.Vector3((box.min.x + box.max.x) / 2, (y0 + y1) / 2, 0);
+  const fov = 22, cam = new THREE.PerspectiveCamera(fov, W / H, 0.01, 200);
+  const hh = (y1 - y0) / 2 * 1.12, hw = size.x / 2 * 1.08;
+  const dist = Math.max(hh, hw * H / W) / Math.tan(THREE.MathUtils.degToRad(fov / 2));
+  cam.position.set(ctr.x, ctr.y + Math.sin(pitch) * dist, Math.cos(pitch) * dist);
+  cam.lookAt(ctr);
+  r.render(sc, cam); window.done = true;
+}).catch(e => { console.log('ERR ' + e); window.done = true; });
+</script></body></html>
