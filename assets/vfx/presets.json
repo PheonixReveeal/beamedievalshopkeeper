@@ -1,0 +1,10910 @@
+{
+ "Voidrender": {
+  "meshSize": [
+   1.0,
+   4.45,
+   0.192
+  ],
+  "anchors": {
+   "base": [
+    0.0,
+    -0.905,
+    0.0
+   ],
+   "tip": [
+    0.0,
+    2.195,
+    0.0
+   ],
+   "mid": [
+    0.0,
+    0.575,
+    0.0
+   ],
+   "gem": [
+    0.0,
+    -1.025,
+    0.0
+   ],
+   "pommel": [
+    0.0,
+    -2.075,
+    0.0
+   ]
+  },
+  "regions": {
+   "blade": {
+    "center": [
+     0.0,
+     0.625,
+     0.0
+    ],
+    "size": [
+     0.42,
+     3.1,
+     0.1
+    ]
+   },
+   "edges": {
+    "center": [
+     0.0,
+     0.625,
+     0.0
+    ],
+    "size": [
+     0.46,
+     3.1,
+     0.02
+    ]
+   }
+  },
+  "orbits": [],
+  "emitters": [
+   {
+    "name": "VoidSmoke",
+    "at": "blade",
+    "texture": "Smoke",
+    "color": [
+     [
+      0.0,
+      [
+       0.1647,
+       0.0314,
+       0.2706
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.0706,
+       0.0,
+       0.1216
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.0,
+       0.0,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      1.6
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.15,
+      0.25
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.2,
+     2.0
+    ],
+    "rate": 22,
+    "speed": [
+     0.2,
+     0.6
+    ],
+    "spread": [
+     30,
+     30
+    ],
+    "accel": [
+     0,
+     0.5,
+     0
+    ],
+    "drag": 1.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -40,
+     40
+    ],
+    "lightEmission": 0,
+    "lightInfluence": 0.3,
+    "brightness": 1.0,
+    "zOffset": -0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     10,
+     14
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "VoidWisps",
+    "at": "blade",
+    "texture": "Mist",
+    "color": [
+     [
+      0.0,
+      [
+       0.7059,
+       0.4196,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.4157,
+       0.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.1686,
+       0.0,
+       0.4
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.35
+     ],
+     [
+      1.0,
+      0.9
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.2,
+      0.45
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.6,
+     1.0
+    ],
+    "rate": 14,
+    "speed": [
+     0.1,
+     0.4
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -90,
+     90
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Runes",
+    "at": "blade",
+    "texture": "Runes",
+    "color": [
+     [
+      0.0,
+      [
+       0.8863,
+       0.7216,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6353,
+       0.2941,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.15,
+      0.24
+     ],
+     [
+      0.85,
+      0.24
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.2,
+      0.0
+     ],
+     [
+      0.8,
+      0.1
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.4,
+     2.2
+    ],
+    "rate": 7,
+    "speed": [
+     0.15,
+     0.35
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0.35,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     0
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "Sparkles",
+    "at": "edges",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.8392,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7529,
+       0.302,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.25,
+      0.22
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.6
+    ],
+    "rate": 22,
+    "speed": [
+     0,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     90
+    ],
+    "rotSpeed": [
+     -60,
+     60
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "PommelVortex",
+    "at": "pommel",
+    "texture": "Swirl",
+    "color": [
+     [
+      0.0,
+      [
+       0.7804,
+       0.4902,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.3529,
+       0.0,
+       0.7843
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.55
+     ],
+     [
+      1.0,
+      0.75
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.3
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.9,
+     1.1
+    ],
+    "rate": 3,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     240,
+     300
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SwingRunes",
+    "at": "blade",
+    "texture": "Runes",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7059,
+       0.3608,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.7
+    ],
+    "rate": 60,
+    "speed": [
+     1,
+     3
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 2,
+    "rotation": [
+     0,
+     0
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 4,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "swing",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "Implosion",
+    "at": "mid",
+    "texture": "Swirl",
+    "color": [
+     [
+      0.0,
+      [
+       0.851,
+       0.651,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.4157,
+       0.0,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      2.6
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.25
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.35,
+     0.35
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -500,
+     -500
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Shockwave",
+    "at": "mid",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       0.7078,
+       0.5,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.4157,
+       0.0,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      5.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "BurstSparks",
+    "at": "blade",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7529,
+       0.302,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.35
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.6
+    ],
+    "rate": 0,
+    "speed": [
+     4,
+     9
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 3,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "VelocityParallel",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 40,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "squash": [
+     [
+      0.0,
+      1.2
+     ],
+     [
+      1.0,
+      0.4
+     ]
+    ]
+   }
+  ],
+  "trails": [
+   {
+    "name": "SwingTrail",
+    "a0": "base",
+    "a1": "tip",
+    "texture": "TrailWisp",
+    "color": [
+     [
+      0.0,
+      [
+       0.6078,
+       0.1882,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.6078,
+       0.1882,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.102,
+       0.0,
+       0.2
+      ]
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      0.6,
+      0.4
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": 0.35,
+    "width": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lightEmission": 0.7,
+    "brightness": 1.25,
+    "mode": "swing",
+    "faceCamera": false
+   }
+  ],
+  "lights": [
+   {
+    "at": "mid",
+    "color": [
+     0.6078,
+     0.1882,
+     1.0
+    ],
+    "brightness": 2.5,
+    "range": 11,
+    "flicker": 0.25,
+    "pulse": [
+     2.0,
+     0.25
+    ]
+   }
+  ],
+  "beams": [
+   {
+    "kind": "bolt",
+    "name": "Crackle1",
+    "frm": {
+     "center": [
+      0.0,
+      -0.425,
+      0.0
+     ],
+     "size": [
+      0.44,
+      0.6,
+      0.02
+     ]
+    },
+    "to": {
+     "center": [
+      0.0,
+      1.375,
+      0.0
+     ],
+     "size": [
+      0.44,
+      1.4,
+      0.02
+     ]
+    },
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.7804,
+       0.4902,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ]
+    ],
+    "width": [
+     0.1,
+     0.06
+    ],
+    "curve": 0.8,
+    "interval": [
+     0.05,
+     0.12
+    ],
+    "chance": 0.75,
+    "brightness": 3.0,
+    "texture": "Lightning",
+    "textureSpeed": 4.0,
+    "segments": 12,
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.1
+     ]
+    ]
+   },
+   {
+    "kind": "bolt",
+    "name": "Crackle2",
+    "frm": {
+     "center": [
+      0.0,
+      0.375,
+      0.0
+     ],
+     "size": [
+      0.44,
+      1.2,
+      0.02
+     ]
+    },
+    "to": {
+     "center": [
+      0.0,
+      1.975,
+      0.0
+     ],
+     "size": [
+      0.3,
+      0.4,
+      0.02
+     ]
+    },
+    "color": [
+     [
+      0.0,
+      [
+       0.902,
+       0.7608,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.5412,
+       0.1686,
+       0.8863
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.902,
+       0.7608,
+       1.0
+      ]
+     ]
+    ],
+    "width": [
+     0.08,
+     0.04
+    ],
+    "curve": 0.6,
+    "interval": [
+     0.05,
+     0.12
+    ],
+    "chance": 0.55,
+    "brightness": 3.0,
+    "texture": "Lightning",
+    "textureSpeed": 4.0,
+    "segments": 12,
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.1
+     ]
+    ]
+   }
+  ]
+ },
+ "Emberfang": {
+  "meshSize": [
+   0.94,
+   4.2,
+   0.236
+  ],
+  "anchors": {
+   "base": [
+    0.0,
+    -0.88,
+    0.0
+   ],
+   "tip": [
+    0.0,
+    2.08,
+    0.0
+   ],
+   "mid": [
+    0.0,
+    0.5,
+    0.0
+   ],
+   "pommel": [
+    0.0,
+    -1.96,
+    0.0
+   ]
+  },
+  "regions": {
+   "blade": {
+    "center": [
+     0.0,
+     0.5,
+     0.0
+    ],
+    "size": [
+     0.3,
+     2.9,
+     0.09
+    ]
+   },
+   "core": {
+    "center": [
+     0.0,
+     0.5,
+     0.0
+    ],
+    "size": [
+     0.12,
+     2.9,
+     0.05
+    ]
+   }
+  },
+  "orbits": [],
+  "emitters": [
+   {
+    "name": "Flames",
+    "at": "blade",
+    "texture": "Flames",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.8235,
+       0.4784
+      ]
+     ],
+     [
+      0.3333333333333333,
+      [
+       1.0,
+       0.5412,
+       0.1216
+      ]
+     ],
+     [
+      0.6666666666666666,
+      [
+       1.0,
+       0.2392,
+       0.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.4784,
+       0.0549,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      0.18
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.12
+     ],
+     [
+      0.6,
+      0.4
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.35,
+     0.6
+    ],
+    "rate": 55,
+    "speed": [
+     0.6,
+     1.4
+    ],
+    "spread": [
+     12,
+     12
+    ],
+    "accel": [
+     0,
+     2.5,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     -12,
+     12
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.7,
+    "zOffset": 0.0,
+    "orientation": "FacingCameraWorldUp",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     24,
+     32
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "Embers",
+    "at": "blade",
+    "texture": "Ember",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.9412,
+       0.6275
+      ]
+     ],
+     [
+      0.5,
+      [
+       1.0,
+       0.5412,
+       0.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.1647,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.0,
+     2.0
+    ],
+    "rate": 30,
+    "speed": [
+     0.8,
+     2.2
+    ],
+    "spread": [
+     45,
+     45
+    ],
+    "accel": [
+     0,
+     1.6,
+     0
+    ],
+    "drag": 0.6,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "VelocityParallel",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "squash": [
+     [
+      0.0,
+      0.6
+     ],
+     [
+      1.0,
+      0.6
+     ]
+    ]
+   },
+   {
+    "name": "HeatSmoke",
+    "at": "blade",
+    "texture": "Smoke",
+    "color": [
+     [
+      0.0,
+      [
+       0.2275,
+       0.1647,
+       0.1333
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.102,
+       0.102,
+       0.102
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      1.6
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.2,
+      0.65
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.6,
+     2.6
+    ],
+    "rate": 9,
+    "speed": [
+     0.6,
+     1.2
+    ],
+    "spread": [
+     20,
+     20
+    ],
+    "accel": [
+     0,
+     0.8,
+     0
+    ],
+    "drag": 0.5,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -30,
+     30
+    ],
+    "lightEmission": 0,
+    "lightInfluence": 0.5,
+    "brightness": 1.0,
+    "zOffset": -1,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     8,
+     10
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "CoreGlow",
+    "at": "core",
+    "texture": "Glow",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.6902,
+       0.3137
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.3529,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.55
+     ],
+     [
+      1.0,
+      0.7
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.8
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.25,
+     0.35
+    ],
+    "rate": 12,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "PommelFire",
+    "at": "pommel",
+    "texture": "Flames",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.7529,
+       0.3765
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.3529,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.22
+     ],
+     [
+      1.0,
+      0.08
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.45
+    ],
+    "rate": 14,
+    "speed": [
+     0.3,
+     0.6
+    ],
+    "spread": [
+     10,
+     10
+    ],
+    "accel": [
+     0,
+     1.5,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.3,
+    "zOffset": 0.0,
+    "orientation": "FacingCameraWorldUp",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     24,
+     32
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "SwingFire",
+    "at": "blade",
+    "texture": "Flames",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.7529,
+       0.3765
+      ]
+     ],
+     [
+      0.5,
+      [
+       1.0,
+       0.4157,
+       0.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6275,
+       0.0941,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.6
+     ],
+     [
+      1.0,
+      0.25
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.25,
+     0.45
+    ],
+    "rate": 55,
+    "speed": [
+     0.5,
+     1.5
+    ],
+    "spread": [
+     60,
+     60
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.4,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "swing",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     30,
+     40
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "FireBurst",
+    "at": "blade",
+    "texture": "Flames",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.8235,
+       0.4784
+      ]
+     ],
+     [
+      0.5,
+      [
+       1.0,
+       0.5412,
+       0.1216
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.2353,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.7
+     ],
+     [
+      1.0,
+      1.3
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.35,
+     0.55
+    ],
+    "rate": 0,
+    "speed": [
+     3,
+     6
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 4,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 16,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     30,
+     40
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "EmberBurst",
+    "at": "blade",
+    "texture": "Ember",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.5412,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.14
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.6,
+     1.2
+    ],
+    "rate": 0,
+    "speed": [
+     5,
+     10
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -6,
+     0
+    ],
+    "drag": 1.5,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "VelocityParallel",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 50,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "squash": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      0.5
+     ]
+    ]
+   },
+   {
+    "name": "Shockwave",
+    "at": "mid",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.6177,
+       0.5
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.2353,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      5.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   }
+  ],
+  "trails": [
+   {
+    "name": "SwingTrail",
+    "a0": "base",
+    "a1": "tip",
+    "texture": "TrailStreak",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.6039,
+       0.1216
+      ]
+     ],
+     [
+      0.5,
+      [
+       1.0,
+       0.6039,
+       0.1216
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7608,
+       0.1137,
+       0.0
+      ]
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      0.5,
+      0.3
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": 0.3,
+    "width": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lightEmission": 1.0,
+    "brightness": 1.25,
+    "mode": "swing",
+    "faceCamera": false
+   }
+  ],
+  "lights": [
+   {
+    "at": "mid",
+    "color": [
+     1.0,
+     0.4784,
+     0.102
+    ],
+    "brightness": 3.0,
+    "range": 13,
+    "flicker": 0.45,
+    "pulse": [
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "beams": []
+ },
+ "Frostbrand": {
+  "meshSize": [
+   0.92,
+   4.18,
+   0.22
+  ],
+  "anchors": {
+   "base": [
+    0.0,
+    -0.79,
+    0.0
+   ],
+   "tip": [
+    0.0,
+    2.07,
+    0.0
+   ],
+   "mid": [
+    0.0,
+    0.49,
+    0.0
+   ],
+   "pommel": [
+    0.0,
+    -1.96,
+    0.0
+   ],
+   "clasp": [
+    0.0,
+    0.04,
+    0.0
+   ]
+  },
+  "regions": {
+   "blade": {
+    "center": [
+     0.0,
+     0.59,
+     0.0
+    ],
+    "size": [
+     0.38,
+     2.8,
+     0.1
+    ]
+   }
+  },
+  "orbits": [],
+  "emitters": [
+   {
+    "name": "ColdMist",
+    "at": "blade",
+    "texture": "Mist",
+    "color": [
+     [
+      0.0,
+      [
+       0.9098,
+       0.9843,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6235,
+       0.8902,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      1.5
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.72
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.4,
+     2.4
+    ],
+    "rate": 10,
+    "speed": [
+     0.05,
+     0.25
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -0.7,
+     0
+    ],
+    "drag": 0.6,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -25,
+     25
+    ],
+    "lightEmission": 0.35,
+    "lightInfluence": 0.0,
+    "brightness": 0.9,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Snow",
+    "at": "blade",
+    "texture": "Snowflake",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7843,
+       0.949,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.13
+     ],
+     [
+      1.0,
+      0.08
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      0.8,
+      0.2
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.8,
+     2.8
+    ],
+    "rate": 12,
+    "speed": [
+     0.2,
+     0.6
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -0.45,
+     0
+    ],
+    "drag": 0.4,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -80,
+     80
+    ],
+    "lightEmission": 0.5,
+    "lightInfluence": 0.0,
+    "brightness": 1.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Sparkles",
+    "at": "blade",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.4353,
+       0.8471,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.25,
+      0.26
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.6
+    ],
+    "rate": 18,
+    "speed": [
+     0,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     90
+    ],
+    "rotSpeed": [
+     -60,
+     60
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Shards",
+    "at": "blade",
+    "texture": "Shards",
+    "color": [
+     [
+      0.0,
+      [
+       0.9098,
+       0.9843,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.498,
+       0.8392,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.14
+     ],
+     [
+      1.0,
+      0.08
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.8,
+      0.2
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.8,
+     1.2
+    ],
+    "rate": 3,
+    "speed": [
+     0.4,
+     1.0
+    ],
+    "spread": [
+     90,
+     90
+    ],
+    "accel": [
+     0,
+     -3,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -200,
+     200
+    ],
+    "lightEmission": 0.4,
+    "lightInfluence": 0.0,
+    "brightness": 1.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "2x2",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "FrostCore",
+    "at": "pommel",
+    "texture": "Glow",
+    "color": [
+     [
+      0.0,
+      [
+       0.8745,
+       0.9725,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.2471,
+       0.7216,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.6
+     ],
+     [
+      1.0,
+      0.7
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.5
+    ],
+    "rate": 6,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SwingFrost",
+    "at": "blade",
+    "texture": "Mist",
+    "color": [
+     [
+      0.0,
+      [
+       0.8471,
+       0.9647,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.5608,
+       0.8627,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.35
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.55
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.5,
+     0.8
+    ],
+    "rate": 30,
+    "speed": [
+     0.2,
+     0.8
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 1.5,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.5,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "swing",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "ShardBurst",
+    "at": "blade",
+    "texture": "Shards",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.498,
+       0.8392,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      1.0,
+      0.15
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.7,
+      0.1
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.6,
+     1.0
+    ],
+    "rate": 0,
+    "speed": [
+     4,
+     8
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -10,
+     0
+    ],
+    "drag": 1,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -400,
+     400
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 30,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "2x2",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "SnowBurst",
+    "at": "blade",
+    "texture": "Snowflake",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6824,
+       0.9176,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      1.0,
+      0.1
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.8,
+     1.4
+    ],
+    "rate": 0,
+    "speed": [
+     2,
+     5
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 2,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -200,
+     200
+    ],
+    "lightEmission": 0.5,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 30,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Shockwave",
+    "at": "mid",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       0.6549,
+       0.8823,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.3098,
+       0.7647,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      4.5
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   }
+  ],
+  "trails": [
+   {
+    "name": "SwingTrail",
+    "a0": "base",
+    "a1": "tip",
+    "texture": "TrailStreak",
+    "color": [
+     [
+      0.0,
+      [
+       0.6588,
+       0.9255,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.6588,
+       0.9255,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.1843,
+       0.6078,
+       1.0
+      ]
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      0.5,
+      0.35
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": 0.35,
+    "width": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lightEmission": 1.0,
+    "brightness": 1.25,
+    "mode": "swing",
+    "faceCamera": false
+   }
+  ],
+  "lights": [
+   {
+    "at": "mid",
+    "color": [
+     0.498,
+     0.8392,
+     1.0
+    ],
+    "brightness": 2.2,
+    "range": 11,
+    "flicker": 0.0,
+    "pulse": [
+     1.2,
+     0.2
+    ]
+   }
+  ],
+  "beams": []
+ },
+ "TidecrystalShard": {
+  "meshSize": [
+   0.94,
+   4.05,
+   0.21
+  ],
+  "anchors": {
+   "base": [
+    0.0,
+    -0.905,
+    0.0
+   ],
+   "tip": [
+    0.0,
+    1.995,
+    0.0
+   ],
+   "mid": [
+    0.0,
+    0.575,
+    0.0
+   ],
+   "gem": [
+    0.0,
+    0.655,
+    0.0
+   ]
+  },
+  "regions": {
+   "blade": {
+    "center": [
+     0.0,
+     0.475,
+     0.0
+    ],
+    "size": [
+     0.42,
+     2.9,
+     0.1
+    ]
+   }
+  },
+  "orbits": [
+   {
+    "name": "Current",
+    "center": [
+     0.0,
+     0.475,
+     0.0
+    ],
+    "radius": 0.42,
+    "speed": 2.6,
+    "count": 3,
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "tilt": 0.0,
+    "wobble": 1.1
+   }
+  ],
+  "emitters": [
+   {
+    "name": "CurrentDrops",
+    "at": "orbit:Current",
+    "texture": "Droplet",
+    "color": [
+     [
+      0.0,
+      [
+       0.9137,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.2,
+       0.8392,
+       0.8157
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.0431,
+       0.4353,
+       0.5412
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.14
+     ],
+     [
+      1.0,
+      0.02
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.45,
+     0.6
+    ],
+    "rate": 40,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     0
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.4,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Bubbles",
+    "at": "blade",
+    "texture": "Bubble",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.5608,
+       0.9608,
+       0.9373
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.06
+     ],
+     [
+      1.0,
+      0.16
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      0.85,
+      0.3
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.4,
+     2.4
+    ],
+    "rate": 14,
+    "speed": [
+     0.3,
+     0.7
+    ],
+    "spread": [
+     25,
+     25
+    ],
+    "accel": [
+     0,
+     0.5,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.3,
+    "lightInfluence": 0.0,
+    "brightness": 1.4,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SeaMist",
+    "at": "blade",
+    "texture": "Mist",
+    "color": [
+     [
+      0.0,
+      [
+       0.749,
+       1.0,
+       0.9765
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.1843,
+       0.7216,
+       0.7765
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      1.2
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.7
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.2,
+     1.8
+    ],
+    "rate": 8,
+    "speed": [
+     0.1,
+     0.3
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.5,
+    "lightInfluence": 0.0,
+    "brightness": 1.2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Sparkles",
+    "at": "blade",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.2157,
+       0.898,
+       0.8471
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.25,
+      0.22
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.6
+    ],
+    "rate": 16,
+    "speed": [
+     0,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     90
+    ],
+    "rotSpeed": [
+     -60,
+     60
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SwingSpray",
+    "at": "blade",
+    "texture": "Droplet",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.2549,
+       0.851,
+       0.8157
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.16
+     ],
+     [
+      1.0,
+      0.05
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.7
+    ],
+    "rate": 90,
+    "speed": [
+     1,
+     3
+    ],
+    "spread": [
+     90,
+     90
+    ],
+    "accel": [
+     0,
+     -9,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.4,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "VelocityParallel",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "swing",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Splash",
+    "at": "blade",
+    "texture": "Droplet",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.1843,
+       0.7686,
+       0.7882
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.22
+     ],
+     [
+      1.0,
+      0.08
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.6,
+     1.0
+    ],
+    "rate": 0,
+    "speed": [
+     4,
+     8
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -14,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.4,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "VelocityParallel",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 45,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Shockwave",
+    "at": "mid",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       0.5608,
+       0.8294,
+       0.8608
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.1216,
+       0.6588,
+       0.7216
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      4.5
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   }
+  ],
+  "trails": [
+   {
+    "name": "SwingTrail",
+    "a0": "base",
+    "a1": "tip",
+    "texture": "TrailWisp",
+    "color": [
+     [
+      0.0,
+      [
+       0.3608,
+       0.9412,
+       0.8941
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.3608,
+       0.9412,
+       0.8941
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.0392,
+       0.4275,
+       0.5608
+      ]
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      0.6,
+      0.35
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": 0.4,
+    "width": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lightEmission": 0.6,
+    "brightness": 1.25,
+    "mode": "swing",
+    "faceCamera": false
+   }
+  ],
+  "lights": [
+   {
+    "at": "mid",
+    "color": [
+     0.2,
+     0.8784,
+     0.8235
+    ],
+    "brightness": 2.2,
+    "range": 10,
+    "flicker": 0.0,
+    "pulse": [
+     1.6,
+     0.2
+    ]
+   }
+  ],
+  "beams": []
+ },
+ "SunsteelFalchion": {
+  "meshSize": [
+   0.85,
+   3.63,
+   0.22
+  ],
+  "anchors": {
+   "base": [
+    0.07,
+    -0.635,
+    0.0
+   ],
+   "tip": [
+    0.1,
+    1.765,
+    0.0
+   ],
+   "mid": [
+    0.08,
+    0.565,
+    0.0
+   ],
+   "guard": [
+    0.0,
+    -0.735,
+    0.0
+   ]
+  },
+  "regions": {
+   "blade": {
+    "center": [
+     0.08,
+     0.565,
+     0.0
+    ],
+    "size": [
+     0.36,
+     2.4,
+     0.09
+    ]
+   }
+  },
+  "orbits": [],
+  "emitters": [
+   {
+    "name": "Flares",
+    "at": "blade",
+    "texture": "Star",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.8235,
+       0.2902
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.3,
+      0.55
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.3
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.7
+    ],
+    "rate": 7,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     45
+    ],
+    "rotSpeed": [
+     -20,
+     20
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Motes",
+    "at": "blade",
+    "texture": "Ember",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.9686,
+       0.8392
+      ]
+     ],
+     [
+      0.5,
+      [
+       1.0,
+       0.7882,
+       0.2353
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.6039,
+       0.1216
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.2,
+      0.09
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.6,
+     2.6
+    ],
+    "rate": 30,
+    "speed": [
+     0.1,
+     0.5
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0.45,
+     0
+    ],
+    "drag": 0.8,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Halo",
+    "at": "guard",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.949,
+       0.7216
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.749,
+       0.1804
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.9
+     ],
+     [
+      1.0,
+      1.15
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.45
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.1,
+     1.3
+    ],
+    "rate": 2,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     30,
+     30
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SunGlow",
+    "at": "blade",
+    "texture": "Glow",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.9059,
+       0.6588
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.6902,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      0.65
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.82
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.4
+    ],
+    "rate": 8,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SwingFlares",
+    "at": "blade",
+    "texture": "Star",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.949,
+       0.7686
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.8118,
+       0.251
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.55
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.25,
+     0.4
+    ],
+    "rate": 22,
+    "speed": [
+     0.5,
+     1.5
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.8,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "swing",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Sunburst",
+    "at": "mid",
+    "texture": "Star",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.949,
+       0.7686
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.8118,
+       0.251
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.2,
+      3.0
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      0.5,
+      0.35
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.45,
+     0.45
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     45
+    ],
+    "rotSpeed": [
+     40,
+     40
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2,
+    "zOffset": 1,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "MoteBurst",
+    "at": "blade",
+    "texture": "Ember",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.7882,
+       0.2353
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.15
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.6,
+     1.2
+    ],
+    "rate": 0,
+    "speed": [
+     3,
+     7
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 3,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 45,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Shockwave",
+    "at": "mid",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.8412,
+       0.5
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.6824,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      4.5
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   }
+  ],
+  "trails": [
+   {
+    "name": "SwingTrail",
+    "a0": "base",
+    "a1": "tip",
+    "texture": "TrailStreak",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.8863,
+       0.4784
+      ]
+     ],
+     [
+      0.5,
+      [
+       1.0,
+       0.8863,
+       0.4784
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.6039,
+       0.1216
+      ]
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      0.5,
+      0.3
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": 0.3,
+    "width": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lightEmission": 1.0,
+    "brightness": 1.25,
+    "mode": "swing",
+    "faceCamera": false
+   }
+  ],
+  "lights": [
+   {
+    "at": "mid",
+    "color": [
+     1.0,
+     0.7608,
+     0.2902
+    ],
+    "brightness": 2.6,
+    "range": 12,
+    "flicker": 0.0,
+    "pulse": [
+     0.8,
+     0.12
+    ]
+   }
+  ],
+  "beams": [
+   {
+    "kind": "rays",
+    "name": "SunRays",
+    "at": "mid",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.949,
+       0.7686
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.7882,
+       0.2353
+      ]
+     ]
+    ],
+    "count": 5,
+    "length": 1.5,
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "cone": 80,
+    "width": [
+     0.3,
+     0.02
+    ],
+    "speed": 0.35,
+    "brightness": 1.1,
+    "texture": "Ray",
+    "transparency": [
+     [
+      0.0,
+      0.55
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ "GlacierCleaver": {
+  "meshSize": [
+   2.216,
+   5.0,
+   0.296
+  ],
+  "anchors": {
+   "head": [
+    0.0,
+    1.6,
+    0.0
+   ],
+   "left": [
+    -1.08,
+    1.6,
+    0.0
+   ],
+   "right": [
+    1.08,
+    1.6,
+    0.0
+   ],
+   "spike": [
+    0.0,
+    2.45,
+    0.0
+   ],
+   "haft": [
+    0.0,
+    0.9,
+    0.0
+   ],
+   "top": [
+    0.0,
+    2.4,
+    0.0
+   ]
+  },
+  "regions": {
+   "head": {
+    "center": [
+     0.0,
+     1.6,
+     0.0
+    ],
+    "size": [
+     2.1,
+     1.4,
+     0.14
+    ]
+   },
+   "lblade": {
+    "center": [
+     -0.75,
+     1.6,
+     0.0
+    ],
+    "size": [
+     0.6,
+     1.2,
+     0.1
+    ]
+   },
+   "rblade": {
+    "center": [
+     0.75,
+     1.6,
+     0.0
+    ],
+    "size": [
+     0.6,
+     1.2,
+     0.1
+    ]
+   }
+  },
+  "orbits": [
+   {
+    "name": "Blizzard",
+    "center": [
+     0.0,
+     1.6,
+     0.0
+    ],
+    "radius": 1.25,
+    "speed": 3.2,
+    "count": 4,
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "tilt": 0.35,
+    "wobble": 0.6
+   }
+  ],
+  "emitters": [
+   {
+    "name": "BlizzardSnow",
+    "at": "orbit:Blizzard",
+    "texture": "Snowflake",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7412,
+       0.9333,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.14
+     ],
+     [
+      1.0,
+      0.05
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.6,
+     1.0
+    ],
+    "rate": 14,
+    "speed": [
+     0.1,
+     0.4
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -120,
+     120
+    ],
+    "lightEmission": 0.5,
+    "lightInfluence": 0.0,
+    "brightness": 1.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "BlizzardMist",
+    "at": "orbit:Blizzard",
+    "texture": "Mist",
+    "color": [
+     [
+      0.0,
+      [
+       0.949,
+       0.9922,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6235,
+       0.8627,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.35
+     ],
+     [
+      1.0,
+      0.8
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.5,
+     0.8
+    ],
+    "rate": 10,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.3,
+    "lightInfluence": 0.0,
+    "brightness": 1.2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "ColdMistL",
+    "at": "lblade",
+    "texture": "Mist",
+    "color": [
+     [
+      0.0,
+      [
+       0.9098,
+       0.9843,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6235,
+       0.8902,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      1.4
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.75
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.4,
+     2.2
+    ],
+    "rate": 6,
+    "speed": [
+     0.05,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -0.8,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.35,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "ColdMistR",
+    "at": "rblade",
+    "texture": "Mist",
+    "color": [
+     [
+      0.0,
+      [
+       0.9098,
+       0.9843,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6235,
+       0.8902,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      1.4
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.75
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.4,
+     2.2
+    ],
+    "rate": 6,
+    "speed": [
+     0.05,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -0.8,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.35,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "FrostRunes",
+    "at": "head",
+    "texture": "Runes",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.4353,
+       0.902,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.15,
+      0.3
+     ],
+     [
+      0.85,
+      0.3
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.2,
+      0.0
+     ],
+     [
+      0.8,
+      0.1
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.2,
+     1.8
+    ],
+    "rate": 5,
+    "speed": [
+     0.1,
+     0.3
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     0
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "Sparkles",
+    "at": "head",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.3725,
+       0.8157,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.25,
+      0.3
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.6
+    ],
+    "rate": 22,
+    "speed": [
+     0,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     90
+    ],
+    "rotSpeed": [
+     -60,
+     60
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "ShardBurst",
+    "at": "head",
+    "texture": "Shards",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.498,
+       0.8392,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.7,
+      0.1
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.7,
+     1.1
+    ],
+    "rate": 0,
+    "speed": [
+     5,
+     10
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -12,
+     0
+    ],
+    "drag": 1,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -400,
+     400
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 40,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "2x2",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "SwingSnow",
+    "at": "head",
+    "texture": "Snowflake",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6824,
+       0.9176,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      1.0,
+      0.08
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.5,
+     0.9
+    ],
+    "rate": 80,
+    "speed": [
+     0.5,
+     2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 2,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -200,
+     200
+    ],
+    "lightEmission": 0.5,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "swing",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Shockwave",
+    "at": "head",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       0.6549,
+       0.8823,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.3098,
+       0.7647,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      7.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   }
+  ],
+  "trails": [
+   {
+    "name": "SwingTrail",
+    "a0": "left",
+    "a1": "right",
+    "texture": "TrailStreak",
+    "color": [
+     [
+      0.0,
+      [
+       0.6588,
+       0.9255,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.6588,
+       0.9255,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.1843,
+       0.6078,
+       1.0
+      ]
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      0.5,
+      0.4
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": 0.35,
+    "width": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lightEmission": 1.0,
+    "brightness": 1.25,
+    "mode": "swing",
+    "faceCamera": false
+   }
+  ],
+  "lights": [
+   {
+    "at": "head",
+    "color": [
+     0.5255,
+     0.8627,
+     1.0
+    ],
+    "brightness": 2.8,
+    "range": 14,
+    "flicker": 0.0,
+    "pulse": [
+     1.0,
+     0.2
+    ]
+   }
+  ],
+  "beams": [
+   {
+    "kind": "bolt",
+    "name": "FrostArc",
+    "frm": {
+     "center": [
+      -1.0,
+      1.6,
+      0.0
+     ],
+     "size": [
+      0.1,
+      1.2,
+      0.05
+     ]
+    },
+    "to": {
+     "center": [
+      1.0,
+      1.6,
+      0.0
+     ],
+     "size": [
+      0.1,
+      1.2,
+      0.05
+     ]
+    },
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.498,
+       0.8784,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ]
+    ],
+    "width": [
+     0.12,
+     0.12
+    ],
+    "curve": 1.6,
+    "interval": [
+     0.08,
+     0.16
+    ],
+    "chance": 0.6,
+    "brightness": 3.0,
+    "texture": "Lightning",
+    "textureSpeed": 4.0,
+    "segments": 12,
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.1
+     ]
+    ]
+   }
+  ]
+ },
+ "DuskforgedWarhammer": {
+  "meshSize": [
+   1.76,
+   4.77,
+   0.622
+  ],
+  "anchors": {
+   "head": [
+    0.12,
+    1.815,
+    0.0
+   ],
+   "front": [
+    0.74,
+    1.815,
+    0.0
+   ],
+   "back": [
+    -0.5,
+    1.815,
+    0.0
+   ],
+   "crystal": [
+    -0.83,
+    1.815,
+    0.0
+   ],
+   "top": [
+    0.12,
+    2.365,
+    0.0
+   ]
+  },
+  "regions": {
+   "head": {
+    "center": [
+     0.12,
+     1.815,
+     0.0
+    ],
+    "size": [
+     1.3,
+     0.62,
+     0.56
+    ]
+   },
+   "crystal": {
+    "center": [
+     -0.73,
+     1.815,
+     0.0
+    ],
+    "size": [
+     0.35,
+     0.4,
+     0.4
+    ]
+   },
+   "face": {
+    "center": [
+     0.84,
+     1.815,
+     0.0
+    ],
+    "size": [
+     0.08,
+     0.5,
+     0.45
+    ]
+   },
+   "cloud": {
+    "center": [
+     0.12,
+     2.365,
+     0.0
+    ],
+    "size": [
+     1.2,
+     0.2,
+     0.5
+    ]
+   }
+  },
+  "orbits": [],
+  "emitters": [
+   {
+    "name": "Zaps",
+    "at": "head",
+    "texture": "Zaps",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7882,
+       0.6353,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.45
+     ],
+     [
+      1.0,
+      0.6
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.3
+     ]
+    ],
+    "lifetime": [
+     0.08,
+     0.14
+    ],
+    "rate": 14,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 4,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Surface",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "2x2",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "CrystalZaps",
+    "at": "crystal",
+    "texture": "Zaps",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.8353,
+       0.5451,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.35
+     ],
+     [
+      1.0,
+      0.45
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.3
+     ]
+    ],
+    "lifetime": [
+     0.06,
+     0.12
+    ],
+    "rate": 12,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 4,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "2x2",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "Sparks",
+    "at": "head",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7059,
+       0.549,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.13
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.25,
+     0.5
+    ],
+    "rate": 26,
+    "speed": [
+     2,
+     5
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -9,
+     0
+    ],
+    "drag": 2,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "VelocityParallel",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Surface",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "squash": [
+     [
+      0.0,
+      1.2
+     ],
+     [
+      1.0,
+      0.6
+     ]
+    ]
+   },
+   {
+    "name": "StormCloud",
+    "at": "cloud",
+    "texture": "Smoke",
+    "color": [
+     [
+      0.0,
+      [
+       0.2902,
+       0.2471,
+       0.4196
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.1647,
+       0.1412,
+       0.251
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.6
+     ],
+     [
+      1.0,
+      1.4
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.55
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.6,
+     2.4
+    ],
+    "rate": 7,
+    "speed": [
+     0.15,
+     0.4
+    ],
+    "spread": [
+     40,
+     40
+    ],
+    "accel": [
+     0,
+     0.25,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -20,
+     20
+    ],
+    "lightEmission": 0.1,
+    "lightInfluence": 0.4,
+    "brightness": 1.0,
+    "zOffset": -1,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     8,
+     10
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "FaceGlow",
+    "at": "face",
+    "texture": "Glow",
+    "color": [
+     [
+      0.0,
+      [
+       0.9137,
+       0.8314,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.5412,
+       0.2941,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.8
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.65
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.2,
+     0.3
+    ],
+    "rate": 10,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SwingZaps",
+    "at": "head",
+    "texture": "Zaps",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7882,
+       0.6353,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.7
+     ],
+     [
+      1.0,
+      0.9
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.5
+     ]
+    ],
+    "lifetime": [
+     0.08,
+     0.12
+    ],
+    "rate": 60,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 4,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "swing",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "2x2",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "ImpactZaps",
+    "at": "head",
+    "texture": "Zaps",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7059,
+       0.549,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      1.2
+     ],
+     [
+      1.0,
+      1.6
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.12,
+     0.2
+    ],
+    "rate": 0,
+    "speed": [
+     2,
+     5
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 16,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "2x2",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "ImpactSparks",
+    "at": "head",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6627,
+       0.5451,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.8
+    ],
+    "rate": 0,
+    "speed": [
+     6,
+     14
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -18,
+     0
+    ],
+    "drag": 1.5,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 4,
+    "zOffset": 0.0,
+    "orientation": "VelocityParallel",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 70,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "squash": [
+     [
+      0.0,
+      1.5
+     ],
+     [
+      1.0,
+      0.5
+     ]
+    ]
+   },
+   {
+    "name": "ImpactDust",
+    "at": "head",
+    "texture": "Smoke",
+    "color": [
+     [
+      0.0,
+      [
+       0.5569,
+       0.5255,
+       0.6588
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.2314,
+       0.2078,
+       0.3137
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.8
+     ],
+     [
+      1.0,
+      2.6
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.8,
+     1.2
+    ],
+    "rate": 0,
+    "speed": [
+     2,
+     4
+    ],
+    "spread": [
+     180,
+     15
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 3,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0,
+    "lightInfluence": 0.6,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 10,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     14,
+     18
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "Shockwave",
+    "at": "head",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       0.7706,
+       0.6471,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.5412,
+       0.2941,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      8.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   }
+  ],
+  "trails": [
+   {
+    "name": "SwingTrail",
+    "a0": "back",
+    "a1": "front",
+    "texture": "TrailStreak",
+    "color": [
+     [
+      0.0,
+      [
+       0.7882,
+       0.6353,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.7882,
+       0.6353,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.2941,
+       0.1216,
+       0.6588
+      ]
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      0.5,
+      0.35
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": 0.3,
+    "width": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lightEmission": 1.0,
+    "brightness": 1.25,
+    "mode": "swing",
+    "faceCamera": false
+   }
+  ],
+  "lights": [
+   {
+    "at": "head",
+    "color": [
+     0.6314,
+     0.451,
+     1.0
+    ],
+    "brightness": 3.0,
+    "range": 14,
+    "flicker": 0.7,
+    "pulse": [
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "beams": [
+   {
+    "kind": "bolt",
+    "name": "Arc1",
+    "frm": "crystal",
+    "to": {
+     "center": [
+      0.42,
+      1.815,
+      0.0
+     ],
+     "size": [
+      0.6,
+      0.55,
+      0.5
+     ]
+    },
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.7059,
+       0.549,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ]
+    ],
+    "width": [
+     0.14,
+     0.08
+    ],
+    "curve": 1.0,
+    "interval": [
+     0.04,
+     0.09
+    ],
+    "chance": 0.75,
+    "brightness": 3.0,
+    "texture": "Lightning",
+    "textureSpeed": 4.0,
+    "segments": 12,
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.1
+     ]
+    ]
+   },
+   {
+    "kind": "bolt",
+    "name": "Arc2",
+    "frm": "crystal",
+    "to": {
+     "center": [
+      0.78,
+      1.815,
+      0.0
+     ],
+     "size": [
+      0.06,
+      0.5,
+      0.45
+     ]
+    },
+    "color": [
+     [
+      0.0,
+      [
+       0.9137,
+       0.8314,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.5412,
+       0.2941,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.9137,
+       0.8314,
+       1.0
+      ]
+     ]
+    ],
+    "width": [
+     0.1,
+     0.05
+    ],
+    "curve": 1.4,
+    "interval": [
+     0.05,
+     0.11
+    ],
+    "chance": 0.6,
+    "brightness": 3.0,
+    "texture": "Lightning",
+    "textureSpeed": 4.0,
+    "segments": 12,
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.1
+     ]
+    ]
+   },
+   {
+    "kind": "bolt",
+    "name": "Arc3",
+    "frm": {
+     "center": [
+      -0.18,
+      2.135,
+      0.0
+     ],
+     "size": [
+      0.6,
+      0.02,
+      0.4
+     ]
+    },
+    "to": {
+     "center": [
+      0.42,
+      1.495,
+      0.0
+     ],
+     "size": [
+      0.6,
+      0.02,
+      0.4
+     ]
+    },
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.7882,
+       0.6353,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ]
+    ],
+    "width": [
+     0.08,
+     0.05
+    ],
+    "curve": 0.8,
+    "interval": [
+     0.06,
+     0.13
+    ],
+    "chance": 0.5,
+    "brightness": 3.0,
+    "texture": "Lightning",
+    "textureSpeed": 4.0,
+    "segments": 12,
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.1
+     ]
+    ]
+   }
+  ]
+ },
+ "RoyalSapphireScepter": {
+  "meshSize": [
+   0.788,
+   5.62,
+   0.91
+  ],
+  "anchors": {
+   "gem": [
+    0.0,
+    2.31,
+    0.0
+   ],
+   "finial": [
+    0.0,
+    2.76,
+    0.0
+   ],
+   "crown": [
+    0.0,
+    2.01,
+    0.0
+   ],
+   "knot": [
+    0.0,
+    -0.08,
+    0.0
+   ],
+   "low": [
+    0.0,
+    1.91,
+    0.0
+   ],
+   "high": [
+    0.0,
+    2.76,
+    0.0
+   ]
+  },
+  "regions": {
+   "crown": {
+    "center": [
+     0.0,
+     2.26,
+     0.0
+    ],
+    "size": [
+     0.6,
+     0.75,
+     0.6
+    ]
+   },
+   "aura": {
+    "center": [
+     0.0,
+     2.31,
+     0.0
+    ],
+    "size": [
+     1.4,
+     1.2,
+     1.4
+    ]
+   }
+  },
+  "orbits": [],
+  "emitters": [
+   {
+    "name": "Sparkles",
+    "at": "crown",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.302,
+       0.4863,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.25,
+      0.25
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.6
+    ],
+    "rate": 24,
+    "speed": [
+     0,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     90
+    ],
+    "rotSpeed": [
+     -60,
+     60
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "GoldDust",
+    "at": "aura",
+    "texture": "Ember",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.9686,
+       0.8392
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.8118,
+       0.2902
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.2,
+      0.08
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.8,
+     2.8
+    ],
+    "rate": 22,
+    "speed": [
+     0.05,
+     0.25
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -0.3,
+     0
+    ],
+    "drag": 0.5,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SapphireGlow",
+    "at": "gem",
+    "texture": "Glow",
+    "color": [
+     [
+      0.0,
+      [
+       0.8118,
+       0.8784,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.1843,
+       0.3569,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      1.1
+     ],
+     [
+      1.0,
+      1.3
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.55
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.4
+    ],
+    "rate": 10,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Crownlight",
+    "at": "finial",
+    "texture": "Star",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.5608,
+       0.6902,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.4,
+      0.7
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.1
+     ],
+     [
+      1.0,
+      0.4
+     ]
+    ],
+    "lifetime": [
+     0.8,
+     1.0
+    ],
+    "rate": 2,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     45
+    ],
+    "rotSpeed": [
+     15,
+     15
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Halo",
+    "at": "finial",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.949,
+       0.7608
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.8,
+       0.251
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.7
+     ],
+     [
+      1.0,
+      0.8
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.5
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.4,
+     1.6
+    ],
+    "rate": 1.5,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     20,
+     20
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SwingStars",
+    "at": "crown",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.4353,
+       0.5843,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.35
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.6
+    ],
+    "rate": 60,
+    "speed": [
+     0.5,
+     2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 2,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "swing",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "RoyalFlash",
+    "at": "gem",
+    "texture": "Star",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.4353,
+       0.5843,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.2,
+      4.0
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.2
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.5,
+     0.5
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     45
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 4,
+    "zOffset": 1,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "GoldBurst",
+    "at": "gem",
+    "texture": "Ember",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.8118,
+       0.2902
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.14
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.8,
+     1.4
+    ],
+    "rate": 0,
+    "speed": [
+     3,
+     7
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 2.5,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 50,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Shockwave",
+    "at": "gem",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       0.5921,
+       0.6784,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.1843,
+       0.3569,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      5.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   }
+  ],
+  "trails": [
+   {
+    "name": "SwingTrail",
+    "a0": "low",
+    "a1": "high",
+    "texture": "TrailStreak",
+    "color": [
+     [
+      0.0,
+      [
+       0.5608,
+       0.6902,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.5608,
+       0.6902,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.8118,
+       0.2902
+      ]
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      0.5,
+      0.35
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": 0.35,
+    "width": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lightEmission": 1.0,
+    "brightness": 1.25,
+    "mode": "swing",
+    "faceCamera": false
+   }
+  ],
+  "lights": [
+   {
+    "at": "gem",
+    "color": [
+     0.3569,
+     0.5255,
+     1.0
+    ],
+    "brightness": 3.0,
+    "range": 14,
+    "flicker": 0.0,
+    "pulse": [
+     1.0,
+     0.15
+    ]
+   }
+  ],
+  "beams": [
+   {
+    "kind": "rays",
+    "name": "Radiance",
+    "at": "gem",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.5608,
+       0.6902,
+       1.0
+      ]
+     ]
+    ],
+    "count": 7,
+    "length": 1.8,
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "cone": 65,
+    "width": [
+     0.35,
+     0.0
+    ],
+    "speed": 0.3,
+    "brightness": 2.2,
+    "texture": "Ray",
+    "transparency": [
+     [
+      0.0,
+      0.35
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ]
+   }
+  ]
+ },
+ "ArcaneAmethystStaff": {
+  "meshSize": [
+   0.482,
+   6.16,
+   0.482
+  ],
+  "anchors": {
+   "crystal": [
+    0.0,
+    2.42,
+    0.0
+   ],
+   "cage_low": [
+    0.0,
+    1.97,
+    0.0
+   ],
+   "cage_high": [
+    0.0,
+    2.97,
+    0.0
+   ],
+   "ring": [
+    0.0,
+    2.42,
+    0.0
+   ]
+  },
+  "regions": {
+   "cage": {
+    "center": [
+     0.0,
+     2.42,
+     0.0
+    ],
+    "size": [
+     0.55,
+     1.0,
+     0.55
+    ]
+   },
+   "aura": {
+    "center": [
+     0.0,
+     2.42,
+     0.0
+    ],
+    "size": [
+     1.3,
+     1.4,
+     1.3
+    ]
+   }
+  },
+  "orbits": [
+   {
+    "name": "Wisps",
+    "center": [
+     0.0,
+     2.42,
+     0.0
+    ],
+    "radius": 0.5,
+    "speed": 2.8,
+    "count": 3,
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "tilt": 0.55,
+    "wobble": 0.0
+   }
+  ],
+  "emitters": [
+   {
+    "name": "OrbTrails",
+    "at": "orbit:Wisps",
+    "texture": "Orb",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.8235,
+       0.4196,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.4157,
+       0.1216,
+       0.8196
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.45,
+     0.6
+    ],
+    "rate": 45,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     0
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Runes",
+    "at": "aura",
+    "texture": "Runes",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.8784,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7529,
+       0.302,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.15,
+      0.22
+     ],
+     [
+      0.85,
+      0.22
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.2,
+      0.0
+     ],
+     [
+      0.8,
+      0.1
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     2.0,
+     3.0
+    ],
+    "rate": 6,
+    "speed": [
+     0.1,
+     0.3
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0.25,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     0
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "Vortex",
+    "at": "crystal",
+    "texture": "Swirl",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.8392,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.5412,
+       0.1686,
+       0.8863
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.9
+     ],
+     [
+      1.0,
+      1.3
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.45
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.4,
+     1.6
+    ],
+    "rate": 2,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     120,
+     160
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.2,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SpellCircle",
+    "at": "ring",
+    "texture": "MagicCircle",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.902,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7059,
+       0.3608,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      1.5
+     ],
+     [
+      1.0,
+      1.5
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.2,
+      0.3
+     ],
+     [
+      0.8,
+      0.3
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     3.0,
+     3.0
+    ],
+    "rate": 0.34,
+    "speed": [
+     0.01,
+     0.01
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     25,
+     25
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "VelocityPerpendicular",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": true,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Sparkles",
+    "at": "cage",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.8235,
+       0.4196,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.25,
+      0.22
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.6
+    ],
+    "rate": 20,
+    "speed": [
+     0,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     90
+    ],
+    "rotSpeed": [
+     -60,
+     60
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SwingOrbs",
+    "at": "cage",
+    "texture": "Orb",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7059,
+       0.3608,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.7
+    ],
+    "rate": 50,
+    "speed": [
+     0.5,
+     2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 2,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "swing",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "CastFlash",
+    "at": "crystal",
+    "texture": "Orb",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7529,
+       0.302,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      3.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.35,
+     0.35
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 4,
+    "zOffset": 1,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "CastRunes",
+    "at": "crystal",
+    "texture": "Runes",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7529,
+       0.302,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.35
+     ],
+     [
+      1.0,
+      0.1
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.6,
+     1.0
+    ],
+    "rate": 0,
+    "speed": [
+     3,
+     6
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 3,
+    "rotation": [
+     0,
+     0
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 24,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "Shockwave",
+    "at": "crystal",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       0.7706,
+       0.5843,
+       0.9431
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.5412,
+       0.1686,
+       0.8863
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      5.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   }
+  ],
+  "trails": [
+   {
+    "name": "SwingTrail",
+    "a0": "cage_low",
+    "a1": "cage_high",
+    "texture": "TrailWisp",
+    "color": [
+     [
+      0.0,
+      [
+       0.8235,
+       0.4196,
+       1.0
+      ]
+     ],
+     [
+      0.5,
+      [
+       0.8235,
+       0.4196,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.2902,
+       0.051,
+       0.5608
+      ]
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      0.6,
+      0.35
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": 0.4,
+    "width": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lightEmission": 0.8,
+    "brightness": 1.25,
+    "mode": "swing",
+    "faceCamera": false
+   }
+  ],
+  "lights": [
+   {
+    "at": "crystal",
+    "color": [
+     0.7059,
+     0.3608,
+     1.0
+    ],
+    "brightness": 3.0,
+    "range": 13,
+    "flicker": 0.0,
+    "pulse": [
+     1.8,
+     0.25
+    ]
+   }
+  ],
+  "beams": []
+ },
+ "GlacierBow": {
+  "meshSize": [
+   0.409,
+   5.0,
+   0.154
+  ],
+  "anchors": {
+   "top_tip": [
+    0.0515,
+    2.3,
+    0.0
+   ],
+   "bottom_tip": [
+    0.0515,
+    -2.3,
+    0.0
+   ],
+   "grip": [
+    -0.1185,
+    0.0,
+    0.0
+   ],
+   "nock": [
+    0.0515,
+    0.0,
+    0.0
+   ]
+  },
+  "regions": {
+   "upper": {
+    "center": [
+     0.0115,
+     1.25,
+     0.0
+    ],
+    "size": [
+     0.3,
+     2.1,
+     0.12
+    ]
+   },
+   "lower": {
+    "center": [
+     0.0115,
+     -1.25,
+     0.0
+    ],
+    "size": [
+     0.3,
+     2.1,
+     0.12
+    ]
+   }
+  },
+  "orbits": [],
+  "emitters": [
+   {
+    "name": "MistUpper",
+    "at": "upper",
+    "texture": "Mist",
+    "color": [
+     [
+      0.0,
+      [
+       0.9098,
+       0.9843,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6235,
+       0.8902,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      1.1
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.75
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.2,
+     2.0
+    ],
+    "rate": 6,
+    "speed": [
+     0.05,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -0.6,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.35,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "MistLower",
+    "at": "lower",
+    "texture": "Mist",
+    "color": [
+     [
+      0.0,
+      [
+       0.9098,
+       0.9843,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6235,
+       0.8902,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      1.1
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.75
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.2,
+     2.0
+    ],
+    "rate": 6,
+    "speed": [
+     0.05,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -0.6,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.35,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SnowUpper",
+    "at": "upper",
+    "texture": "Snowflake",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7843,
+       0.949,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.12
+     ],
+     [
+      1.0,
+      0.06
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.6,
+     2.6
+    ],
+    "rate": 7,
+    "speed": [
+     0.2,
+     0.5
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -0.4,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -80,
+     80
+    ],
+    "lightEmission": 0.5,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "SnowLower",
+    "at": "lower",
+    "texture": "Snowflake",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.7843,
+       0.949,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.12
+     ],
+     [
+      1.0,
+      0.06
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.6,
+     2.6
+    ],
+    "rate": 7,
+    "speed": [
+     0.2,
+     0.5
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     -0.4,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     -80,
+     80
+    ],
+    "lightEmission": 0.5,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Sparkles",
+    "at": "upper",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.4353,
+       0.8471,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.25,
+      0.22
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.6
+    ],
+    "rate": 10,
+    "speed": [
+     0,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     90
+    ],
+    "rotSpeed": [
+     -60,
+     60
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Sparkles2",
+    "at": "lower",
+    "texture": "Spark",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.4353,
+       0.8471,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.25,
+      0.22
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.6
+    ],
+    "rate": 10,
+    "speed": [
+     0,
+     0.2
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     90
+    ],
+    "rotSpeed": [
+     -60,
+     60
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "ShotFrost",
+    "at": "nock",
+    "texture": "Mist",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.5608,
+       0.8627,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.3
+     ],
+     [
+      1.0,
+      1.4
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.1
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.5,
+     0.8
+    ],
+    "rate": 0,
+    "speed": [
+     2,
+     5
+    ],
+    "spread": [
+     25,
+     25
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 3,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0.6,
+    "lightInfluence": 0.0,
+    "brightness": 1.0,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Front",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 16,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "Shockwave",
+    "at": "nock",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       0.6549,
+       0.8823,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.3098,
+       0.7647,
+       1.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      3.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   }
+  ],
+  "trails": [],
+  "lights": [
+   {
+    "at": "grip",
+    "color": [
+     0.498,
+     0.8392,
+     1.0
+    ],
+    "brightness": 2.0,
+    "range": 10,
+    "flicker": 0.0,
+    "pulse": [
+     1.2,
+     0.2
+    ]
+   }
+  ],
+  "beams": [
+   {
+    "kind": "beam",
+    "name": "StringGlowTop",
+    "a0": "top_tip",
+    "a1": "nock",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.498,
+       0.8784,
+       1.0
+      ]
+     ]
+    ],
+    "width": [
+     0.07,
+     0.07
+    ],
+    "curve": [
+     0,
+     0
+    ],
+    "texture": "Lightning",
+    "textureSpeed": 2.5,
+    "textureLength": 1.2,
+    "brightness": 2.5,
+    "transparency": [
+     [
+      0.0,
+      0.15
+     ],
+     [
+      1.0,
+      0.15
+     ]
+    ],
+    "segments": 10,
+    "lightEmission": 1.0
+   },
+   {
+    "kind": "beam",
+    "name": "StringGlowBottom",
+    "a0": "nock",
+    "a1": "bottom_tip",
+    "color": [
+     [
+      0.0,
+      [
+       0.498,
+       0.8784,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ]
+    ],
+    "width": [
+     0.07,
+     0.07
+    ],
+    "curve": [
+     0,
+     0
+    ],
+    "texture": "Lightning",
+    "textureSpeed": -2.5,
+    "textureLength": 1.2,
+    "brightness": 2.5,
+    "transparency": [
+     [
+      0.0,
+      0.15
+     ],
+     [
+      1.0,
+      0.15
+     ]
+    ],
+    "segments": 10,
+    "lightEmission": 1.0
+   }
+  ]
+ },
+ "DragonbaneArbalest": {
+  "meshSize": [
+   2.888,
+   0.693,
+   3.168
+  ],
+  "anchors": {
+   "snout": [
+    0.0,
+    0.0835,
+    -1.574
+   ],
+   "head": [
+    0.0,
+    0.0835,
+    -1.334
+   ],
+   "ltip": [
+    -1.44,
+    0.3135,
+    -0.464
+   ],
+   "rtip": [
+    1.44,
+    0.3135,
+    -0.464
+   ],
+   "nut": [
+    0.0,
+    0.1585,
+    0.116
+   ],
+   "bolt": [
+    0.0,
+    0.1635,
+    -1.434
+   ]
+  },
+  "regions": {
+   "lwing": {
+    "center": [
+     -0.8,
+     0.1235,
+     -0.804
+    ],
+    "size": [
+     1.1,
+     0.06,
+     0.45
+    ]
+   },
+   "rwing": {
+    "center": [
+     0.8,
+     0.1235,
+     -0.804
+    ],
+    "size": [
+     1.1,
+     0.06,
+     0.45
+    ]
+   },
+   "stock": {
+    "center": [
+     0.0,
+     0.0635,
+     0.466
+    ],
+    "size": [
+     0.18,
+     0.2,
+     2.6
+    ]
+   }
+  },
+  "orbits": [],
+  "emitters": [
+   {
+    "name": "Breath",
+    "at": "snout",
+    "texture": "Flames",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.9529,
+       0.6902
+      ]
+     ],
+     [
+      0.5,
+      [
+       1.0,
+       0.5412,
+       0.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.6275,
+       0.0941,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      1.0,
+      0.5
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.25,
+     0.4
+    ],
+    "rate": 30,
+    "speed": [
+     0.8,
+     1.6
+    ],
+    "spread": [
+     12,
+     12
+    ],
+    "accel": [
+     0,
+     1.2,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 2.5,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Front",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     28,
+     36
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "NostrilSmoke",
+    "at": "snout",
+    "texture": "Smoke",
+    "color": [
+     [
+      0.0,
+      [
+       0.2275,
+       0.1647,
+       0.1333
+      ]
+     ],
+     [
+      1.0,
+      [
+       0.0824,
+       0.0824,
+       0.0824
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      1.0,
+      0.9
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.2,
+      0.55
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.2,
+     1.8
+    ],
+    "rate": 7,
+    "speed": [
+     0.4,
+     0.8
+    ],
+    "spread": [
+     20,
+     20
+    ],
+    "accel": [
+     0,
+     0.9,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 0,
+    "lightInfluence": 0.5,
+    "brightness": 1.0,
+    "zOffset": -0.5,
+    "orientation": "FacingCamera",
+    "direction": "Front",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     8,
+     10
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "WingEmbersL",
+    "at": "lwing",
+    "texture": "Ember",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.9412,
+       0.6275
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.4157,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.08
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.0,
+     1.8
+    ],
+    "rate": 14,
+    "speed": [
+     0.3,
+     1.0
+    ],
+    "spread": [
+     30,
+     30
+    ],
+    "accel": [
+     0,
+     1.2,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "WingEmbersR",
+    "at": "rwing",
+    "texture": "Ember",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.9412,
+       0.6275
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.4157,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.08
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.0,
+     1.8
+    ],
+    "rate": 14,
+    "speed": [
+     0.3,
+     1.0
+    ],
+    "spread": [
+     30,
+     30
+    ],
+    "accel": [
+     0,
+     1.2,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   },
+   {
+    "name": "RuneGlow",
+    "at": "stock",
+    "texture": "Runes",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.8235,
+       0.4784
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.2353,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.2,
+      0.16
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.3,
+      0.1
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     1.0,
+     1.6
+    ],
+    "rate": 5,
+    "speed": [
+     0.1,
+     0.3
+    ],
+    "spread": [
+     180,
+     180
+    ],
+    "accel": [
+     0,
+     0.4,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     0
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "idle",
+    "burst": 0,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "Random",
+    "fps": [
+     20,
+     30
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "MuzzleBlast",
+    "at": "snout",
+    "texture": "Flames",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.8235,
+       0.4784
+      ]
+     ],
+     [
+      0.5,
+      [
+       1.0,
+       0.5412,
+       0.1216
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.2353,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.5
+     ],
+     [
+      1.0,
+      1.3
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.3,
+     0.5
+    ],
+    "rate": 0,
+    "speed": [
+     4,
+     8
+    ],
+    "spread": [
+     25,
+     25
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 4,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.0,
+    "orientation": "FacingCamera",
+    "direction": "Front",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 26,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "flipbook": "4x4",
+    "flipMode": "OneShot",
+    "fps": [
+     30,
+     40
+    ],
+    "flipRandomStart": true
+   },
+   {
+    "name": "MuzzleEmbers",
+    "at": "snout",
+    "texture": "Ember",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       1.0,
+       1.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.5412,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.14
+     ],
+     [
+      1.0,
+      0.0
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.5,
+     1.0
+    ],
+    "rate": 0,
+    "speed": [
+     6,
+     12
+    ],
+    "spread": [
+     30,
+     30
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 1.5,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 3,
+    "zOffset": 0.0,
+    "orientation": "VelocityParallel",
+    "direction": "Front",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 40,
+    "swingBurst": 0,
+    "velInherit": 0.0,
+    "squash": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      1.0,
+      0.5
+     ]
+    ]
+   },
+   {
+    "name": "Shockwave",
+    "at": "snout",
+    "texture": "Ring",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.6177,
+       0.5
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.2353,
+       0.0
+      ]
+     ]
+    ],
+    "size": [
+     [
+      0.0,
+      0.4
+     ],
+     [
+      1.0,
+      2.2
+     ]
+    ],
+    "transparency": [
+     [
+      0.0,
+      0.25
+     ],
+     [
+      0.6,
+      0.6
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ],
+    "lifetime": [
+     0.4,
+     0.4
+    ],
+    "rate": 0,
+    "speed": [
+     0,
+     0
+    ],
+    "spread": [
+     0,
+     0
+    ],
+    "accel": [
+     0,
+     0,
+     0
+    ],
+    "drag": 0.0,
+    "rotation": [
+     0,
+     360
+    ],
+    "rotSpeed": [
+     0,
+     0
+    ],
+    "lightEmission": 1.0,
+    "lightInfluence": 0.0,
+    "brightness": 1.6,
+    "zOffset": 0.5,
+    "orientation": "FacingCamera",
+    "direction": "Top",
+    "shape": "Box",
+    "shapeStyle": "Volume",
+    "shapeInOut": "Outward",
+    "locked": false,
+    "mode": "burst",
+    "burst": 1,
+    "swingBurst": 0,
+    "velInherit": 0.0
+   }
+  ],
+  "trails": [],
+  "lights": [
+   {
+    "at": "head",
+    "color": [
+     1.0,
+     0.4784,
+     0.102
+    ],
+    "brightness": 2.5,
+    "range": 10,
+    "flicker": 0.5,
+    "pulse": [
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "beams": [
+   {
+    "kind": "beam",
+    "name": "StringFireL",
+    "a0": "ltip",
+    "a1": "nut",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.8235,
+       0.4784
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.3529,
+       0.0
+      ]
+     ]
+    ],
+    "width": [
+     0.06,
+     0.06
+    ],
+    "curve": [
+     0,
+     0
+    ],
+    "texture": "Lightning",
+    "textureSpeed": 3,
+    "textureLength": 1.5,
+    "brightness": 2.5,
+    "transparency": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "segments": 10,
+    "lightEmission": 1.0
+   },
+   {
+    "kind": "beam",
+    "name": "StringFireR",
+    "a0": "nut",
+    "a1": "rtip",
+    "color": [
+     [
+      0.0,
+      [
+       1.0,
+       0.3529,
+       0.0
+      ]
+     ],
+     [
+      1.0,
+      [
+       1.0,
+       0.8235,
+       0.4784
+      ]
+     ]
+    ],
+    "width": [
+     0.06,
+     0.06
+    ],
+    "curve": [
+     0,
+     0
+    ],
+    "texture": "Lightning",
+    "textureSpeed": -3,
+    "textureLength": 1.5,
+    "brightness": 2.5,
+    "transparency": [
+     [
+      0.0,
+      0.2
+     ],
+     [
+      1.0,
+      0.2
+     ]
+    ],
+    "segments": 10,
+    "lightEmission": 1.0
+   }
+  ]
+ }
+}
