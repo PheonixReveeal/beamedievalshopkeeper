@@ -1,0 +1,45 @@
+{
+  "_note": "Particle prefabs. Each top-level entry becomes an Attachment holding its ParticleEmitters. Property names and values are Roblox's (checked against the reflection database at build time). Sequences: [[time, value, envelope?], ...]; colours: [r, g, b] 0-255 or [[time, [r, g, b]], ...]; ranges: [min, max]; enums by item name.",
+  "Intro_RunDust": {
+    "class": "Attachment",
+    "attributes": {"IntroEffect": "RunDust"},
+    "children": [
+      {"class": "ParticleEmitter", "name": "Puff",
+       "attributes": {"EmitCount": 3},
+       "props": {
+         "Enabled": false, "Rate": 14,
+         "Texture": "rbxasset://textures/particles/smoke_main.dds",
+         "Color": [[0, [222, 204, 170]], [1, [196, 176, 142]]],
+         "Size": [[0, 0.35], [0.4, 0.9], [1, 1.3]],
+         "Transparency": [[0, 0.55], [0.5, 0.75], [1, 1]],
+         "Lifetime": [0.5, 0.85], "Speed": [0.8, 2.0], "SpreadAngle": [40, 40],
+         "Acceleration": [0, 0.8, 0], "Drag": 3,
+         "Rotation": [0, 360], "RotSpeed": [-40, 40],
+         "LightEmission": 0, "LightInfluence": 1, "Brightness": 1,
+         "Orientation": "FacingCamera", "EmissionDirection": "Top",
+         "Shape": "Box", "ShapeStyle": "Volume", "ShapeInOut": "Outward",
+         "LockedToPart": false, "ZOffset": 0
+       }}
+    ]
+  },
+  "Intro_SkidDust": {
+    "class": "Attachment",
+    "attributes": {"IntroEffect": "SkidDust"},
+    "children": [
+      {"class": "ParticleEmitter", "name": "Cloud",
+       "attributes": {"EmitCount": 14},
+       "props": {
+         "Enabled": false, "Rate": 0,
+         "Texture": "rbxasset://textures/particles/smoke_main.dds",
+         "Color": [[0, [222, 204, 170]], [1, [190, 170, 136]]],
+         "Size": [[0, 0.6], [0.35, 1.6], [1, 2.4]],
+         "Transparency": [[0, 0.45], [0.6, 0.7], [1, 1]],
+         "Lifetime": [0.6, 1.0], "Speed": [4, 7], "SpreadAngle": [70, 12],
+         "Acceleration": [0, 0.6, 0], "Drag": 5,
+         "Rotation": [0, 360], "RotSpeed": [-60, 60],
+         "LightEmission": 0, "LightInfluence": 1,
+         "Orientation": "FacingCamera", "EmissionDirection": "Front"
+       }}
+    ]
+  }
+}

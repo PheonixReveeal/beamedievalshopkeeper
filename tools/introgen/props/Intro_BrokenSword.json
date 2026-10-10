@@ -1,0 +1,15 @@
+{
+  "name": "Intro_BrokenSword",
+  "note": "Sword frame: origin = centre of the fist on the grip, +Y toward the (missing) tip, X = blade width, Z = blade thickness. Same convention as assets/weapons. 'rot' is CFrame.Angles(x, y, z) in degrees. The part named Handle is the Tool handle / Model PrimaryPart.",
+  "parts": [
+    {"name": "Handle",   "class": "Part", "shape": "Cylinder", "size": [0.8, 0.22, 0.22], "pos": [0, 0, 0], "rot": [0, 0, 90], "color": [101, 67, 42], "material": "Leather"},
+    {"name": "WrapLow",  "class": "Part", "shape": "Cylinder", "size": [0.06, 0.26, 0.26], "pos": [0, -0.2, 0], "rot": [0, 0, 90], "color": [62, 41, 27], "material": "Leather"},
+    {"name": "WrapHigh", "class": "Part", "shape": "Cylinder", "size": [0.06, 0.26, 0.26], "pos": [0, 0.2, 0], "rot": [0, 0, 90], "color": [62, 41, 27], "material": "Leather"},
+    {"name": "Pommel",   "class": "Part", "shape": "Ball", "size": [0.34, 0.34, 0.34], "pos": [0, -0.5, 0], "color": [118, 114, 106], "material": "Metal"},
+    {"name": "Guard",    "class": "Part", "shape": "Block", "size": [1.1, 0.14, 0.26], "pos": [0, 0.48, 0], "rot": [0, 0, 4], "color": [112, 101, 84], "material": "Metal"},
+    {"name": "Blade",    "class": "Part", "shape": "Block", "size": [0.36, 0.95, 0.07], "pos": [0, 1.025, 0], "color": [176, 179, 184], "material": "Metal"},
+    {"name": "Fuller",   "class": "Part", "shape": "Block", "size": [0.08, 0.7, 0.076], "pos": [0, 0.93, 0], "color": [120, 124, 131], "material": "Metal"},
+    {"name": "ToothRight", "class": "WedgePart", "size": [0.07, 0.32, 0.2], "pos": [0.08, 1.66, 0], "rot": [0, 90, 0], "color": [176, 179, 184], "material": "Metal"},
+    {"name": "ToothLeft",  "class": "WedgePart", "size": [0.07, 0.16, 0.16], "pos": [-0.1, 1.58, 0], "rot": [0, -90, 0], "color": [176, 179, 184], "material": "Metal"}
+  ]
+}

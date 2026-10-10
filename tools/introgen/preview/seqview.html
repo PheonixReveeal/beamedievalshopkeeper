@@ -1,0 +1,152 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;background:#181b21;font:600 15px system-ui,sans-serif;color:#fff}
+#sub{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);max-width:86%;padding:6px 14px;background:#000a;border-radius:8px;text-align:center}
+#sub:empty{display:none}
+#stamp{position:absolute;left:8px;top:6px;font:600 12px system-ui;color:#dfe5ee;background:#0008;padding:2px 6px;border-radius:4px}
+</style></head><body>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+<div id="sub"></div><div id="stamp"></div>
+<script type="module">
+// Cutscene animatic: plays a timeline of intro animations with Roblox-style crossfades (track weights ramp linearly over
+// the fade time; joints blend by normalised weight), moves the actor along its run path, swaps props, shows subtitles.
+// Query: seq=<file in ../sequences/ without .json>  w,h   window.renderAt(t)   window.info = {length}
+import * as THREE from 'three';
+import {prepare, sample, fk, mirror} from './anim.js';
+
+const q = new URLSearchParams(location.search);
+const W = +q.get('w') || 960, H = +q.get('h') || 540;
+const r = new THREE.WebGLRenderer({antialias: true, preserveDrawingBuffer: true});
+r.setPixelRatio(1); r.setSize(W, H); r.shadowMap.enabled = true; r.shadowMap.type = THREE.PCFSoftShadowMap;
+r.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(r.domElement);
+const sc = new THREE.Scene();
+sc.background = new THREE.Color(0x9cc3e6);
+sc.fog = new THREE.Fog(0x9cc3e6, 40, 110);
+sc.add(new THREE.HemisphereLight(0xdfe8ff, 0x5a4a35, 1.5));
+const sun = new THREE.DirectionalLight(0xfff0d8, 2.4);
+sun.position.set(6, 14, -8); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048);
+Object.assign(sun.shadow.camera, {left: -14, right: 14, top: 14, bottom: -14, near: 1, far: 60});
+sc.add(sun, sun.target);
+const gtex = (() => {
+  const c = document.createElement('canvas'); c.width = c.height = 64; const g = c.getContext('2d');
+  g.fillStyle = '#8a7a5f'; g.fillRect(0, 0, 64, 64); g.strokeStyle = '#7b6c53'; g.lineWidth = 2; g.strokeRect(0, 0, 64, 64);
+  const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(100, 100); t.colorSpace = THREE.SRGBColorSpace; return t;
+})();
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), new THREE.MeshStandardMaterial({map: gtex, roughness: 1}));
+ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true; sc.add(ground);
+
+const get = async p => (await fetch(p)).json();
+const rig = await get('../rig_r15.json');
+const seq = await get(`../sequences/${q.get('seq') || 'Opening'}.json`);
+for (const s of seq.set || []) {    // simple set dressing: boxes {pos, size, color}
+  const m = new THREE.Mesh(new THREE.BoxGeometry(...s.size), new THREE.MeshStandardMaterial({color: s.color, roughness: 0.9}));
+  m.position.set(...s.pos); if (s.rotY) m.rotation.y = s.rotY * Math.PI / 180; m.castShadow = m.receiveShadow = true; sc.add(m);
+}
+async function loadAnim(name) {
+  try { return await get(`../anims/${name}.json`); }
+  catch { return mirror(await get(`../anims/${name.replace(/Right$/, '')}.json`), name); }
+}
+const preps = {};
+for (const c of seq.clips) if (!preps[c.anim]) preps[c.anim] = prepare(await loadAnim(c.anim), rig);
+
+// ---- rig + props (same look as animview) ----
+const meshes = {};
+for (const [name, p] of Object.entries(rig.parts)) {
+  if (p.hidden) continue;
+  const k = /LowerArm|LowerLeg/.test(name) ? 0.93 : /Hand/.test(name) ? 0.86 : /UpperArm|UpperLeg/.test(name) ? 0.985 : 1;
+  const ky = /Hand/.test(name) ? 1.15 : 1;
+  const m = new THREE.Mesh(new THREE.BoxGeometry(p.size[0] * k, p.size[1] * ky, p.size[2] * k), new THREE.MeshStandardMaterial({color: p.color, roughness: 0.8}));
+  m.castShadow = m.receiveShadow = true; m.matrixAutoUpdate = false; sc.add(m); meshes[name] = m;
+  if (p.face) {
+    const mat = new THREE.MeshBasicMaterial({color: 0x1b1410});
+    for (const x of [-0.22, 0.22]) { const e = new THREE.Mesh(new THREE.BoxGeometry(0.14, 0.2, 0.02), mat); e.position.set(x, 0.12, -p.size[2] / 2 - 0.005); m.add(e); }
+    const mo = new THREE.Mesh(new THREE.BoxGeometry(0.36, 0.06, 0.02), mat); mo.position.set(0, -0.2, -p.size[2] / 2 - 0.005); m.add(mo);
+  }
+}
+function partMesh(pt) {
+  let geo; const [sx, sy, sz] = pt.size;
+  if (pt.class === 'WedgePart') {
+    const s = new THREE.Shape(); s.moveTo(-sz / 2, -sy / 2); s.lineTo(sz / 2, -sy / 2); s.lineTo(sz / 2, sy / 2); s.closePath();
+    geo = new THREE.ExtrudeGeometry(s, {depth: sx, bevelEnabled: false}); geo.translate(0, 0, -sx / 2); geo.rotateY(-Math.PI / 2);
+  } else if (pt.shape === 'Ball') geo = new THREE.SphereGeometry(Math.min(sx, sy, sz) / 2, 16, 12);
+  else if (pt.shape === 'Cylinder') { geo = new THREE.CylinderGeometry(Math.min(sy, sz) / 2, Math.min(sy, sz) / 2, sx, 14); geo.rotateZ(-Math.PI / 2); }
+  else geo = new THREE.BoxGeometry(sx, sy, sz);
+  const metal = pt.material === 'Metal' || pt.material === 'CorrodedMetal';
+  const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({color: new THREE.Color(`rgb(${pt.color.join(',')})`), metalness: metal ? 0.55 : 0, roughness: metal ? 0.35 : 0.85}));
+  m.castShadow = true; m.position.set(...pt.pos);
+  if (pt.rot) m.rotation.set(...pt.rot.map(v => v * Math.PI / 180), 'XYZ');
+  return m;
+}
+const props = {};
+for (const [key, file] of [['broken', 'Intro_BrokenSword'], ['intact', 'StarterSword']]) {
+  const g = new THREE.Group(); g.matrixAutoUpdate = false; g.visible = false; sc.add(g); props[key] = g;
+  for (const pt of (await get(`../props/${file}.json`)).parts) g.add(partMesh(pt));
+}
+
+// ---- timeline ----
+// clip: {anim, at, fade, speed?}; a non-looping clip holds its last frame until the next clip fades it out.
+const clips = seq.clips.map((c, i) => ({...c, fade: c.fade ?? 0.2, speed: c.speed ?? 1, end: seq.clips[i + 1]?.at ?? Infinity, nextFade: seq.clips[i + 1]?.fade ?? 0.2}));
+function blendedPoses(t) {
+  const acc = {}; let total = 0;
+  const parts = [];
+  for (const c of clips) {
+    if (t < c.at || t > c.end + c.nextFade) continue;
+    let w = Math.min(1, c.fade > 0 ? (t - c.at) / c.fade : 1);
+    if (t > c.end) w *= Math.max(0, 1 - (t - c.end) / c.nextFade);
+    if (w <= 0) continue;
+    const p = preps[c.anim];
+    let lt = (t - c.at) * c.speed;
+    if (!p.loop) lt = Math.min(lt, p.length);
+    parts.push({w, poses: sample(p, lt)}); total += w;
+  }
+  const out = {};
+  for (const j of rig.joints.map(j => j.part1)) {
+    let q = new THREE.Quaternion(), v = new THREE.Vector3(), acc = 0;
+    for (const {w, poses} of parts) {      // incremental slerp = normalised weighted blend
+      acc += w; const a = w / acc;
+      q = q.slerp(poses[j].q, acc === w ? 1 : a); v.lerp(poses[j].p, acc === w ? 1 : a);
+    }
+    if (total < 1) { q.slerp(new THREE.Quaternion(), 1 - total); v.multiplyScalar(total); }   // remainder = rest pose
+    out[j] = {q, p: v};
+  }
+  return out;
+}
+// actor path: keys {t, pos:[x,z], yaw (deg, 0 = facing -Z)} with linear / eased interpolation
+function rootAt(t) {
+  const ks = seq.path; let i = 0;
+  while (i < ks.length - 1 && ks[i + 1].t <= t) i++;
+  const a = ks[i], b = ks[Math.min(i + 1, ks.length - 1)];
+  let u = b === a ? 0 : Math.min(1, Math.max(0, (t - a.t) / (b.t - a.t)));
+  if (a.ease === 'out') u = 1 - (1 - u) * (1 - u); else if (a.ease === 'inout') u = u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
+  const x = a.pos[0] + (b.pos[0] - a.pos[0]) * u, z = a.pos[1] + (b.pos[1] - a.pos[1]) * u;
+  const yaw = a.yaw + (b.yaw - a.yaw) * u;
+  return {x, z, yaw};
+}
+function at(list, t) { let cur = null; for (const e of list || []) if (e.t <= t) cur = e; return cur; }
+const cam = new THREE.PerspectiveCamera(seq.camera?.fov || 40, W / H, 0.1, 300);
+function camAt(t) {
+  const ks = seq.camera.keys; let i = 0;
+  while (i < ks.length - 1 && ks[i + 1].t <= t) i++;
+  const a = ks[i], b = ks[Math.min(i + 1, ks.length - 1)];
+  let u = b === a ? 0 : Math.min(1, Math.max(0, (t - a.t) / (b.t - a.t))); u = u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
+  const L = (p, q2) => p.map((v, k) => v + (q2[k] - v) * u);
+  return {pos: L(a.pos, b.pos), look: L(a.look, b.look)};
+}
+
+window.renderAt = t => {
+  const poses = blendedPoses(t);
+  const R = rootAt(t);
+  const base = new THREE.Matrix4().makeRotationY(R.yaw * Math.PI / 180).setPosition(R.x, 0, R.z);
+  const w = fk(rig, poses);
+  for (const [n, m] of Object.entries(meshes)) m.matrix.multiplyMatrices(base, w[n]);
+  const pr = at(seq.props, t)?.prop || 'none';
+  for (const [k, g] of Object.entries(props)) { g.visible = k === pr; if (g.visible) g.matrix.multiplyMatrices(base, w.__grip); }
+  const c = camAt(t); cam.position.set(...c.pos); cam.lookAt(...c.look);
+  sun.target.position.set(R.x, 0, R.z); sun.position.set(R.x + 6, 14, R.z - 8);
+  r.render(sc, cam);
+  document.getElementById('sub').textContent = at(seq.subtitles, t)?.text || '';
+  document.getElementById('stamp').textContent = `${t.toFixed(2)}s  ${clips.filter(c => t >= c.at && t <= c.end).map(c => c.anim).join(' ')}`;
+};
+window.info = {length: seq.length};
+window.ready = true;
+</script></body></html>
