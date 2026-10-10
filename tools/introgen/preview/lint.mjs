@@ -70,6 +70,7 @@ for (const name of names) {
   const bodyParts = Object.keys(rig.parts).filter(p => !rig.parts[p].hidden);
   let minFoot = Infinity, maxSlide = 0, slideAt = 0, maxSpeed = {}, worstSelf = {}, worstProp = {};
   let prevFoot = {}, prevQ = null, airborne = 0;
+  const propFloor = {y: Infinity};
   for (let i = 0; i < n; i++) {
     const t = Math.min(prep.length, i / fps);
     const poses = sample(prep, t);
@@ -108,6 +109,7 @@ for (const name of names) {
       const m = w.__grip.clone().multiply(new THREE.Matrix4().compose(new THREE.Vector3(...pt.pos),
         new THREE.Quaternion().setFromEuler(new THREE.Euler(...(pt.rot || [0, 0, 0]).map(v => v * Math.PI / 180), 'XYZ')), new THREE.Vector3(1, 1, 1)));
       const pb = obb(m, pt.size, 0.95);
+      for (const c of corners(obb(m, pt.size))) if (c.y < propFloor.y) { propFloor.y = c.y; propFloor.t = t; propFloor.part = pt.name; }
       for (const p of bodyParts) {
         if (p === 'RightHand' || p === 'RightLowerArm' || allow.has('Prop|' + p)) continue;
         const d = obbOverlap(pb, boxes[p]);
@@ -123,6 +125,7 @@ for (const name of names) {
   R.info.maxFootSlide = +maxSlide.toFixed(2);
   if (!src.locomotion && maxSlide > 1.2) R.warnings.push(`a planted foot slides at ${maxSlide.toFixed(1)} studs/s near t=${slideAt.toFixed(2)}`);
   for (const [k, v] of Object.entries(worstSelf)) R.warnings.push(`body intersection ${k.replace('|', ' / ')} ${v.d.toFixed(2)} studs at t=${v.t.toFixed(2)}`);
+  if (propFloor.y < -0.03) R.warnings.push(`prop ${propFloor.part} goes ${(-propFloor.y).toFixed(2)} studs through the floor at t=${propFloor.t.toFixed(2)}`);
   for (const [k, v] of Object.entries(worstProp)) R.warnings.push(`prop ${k.replace('>', ' passes through ')} ${v.d.toFixed(2)} studs at t=${v.t.toFixed(2)}`);
   for (const [j, s] of Object.entries(maxSpeed)) if (s.v > 1500) R.warnings.push(`${j} snaps at ${s.v.toFixed(0)} deg/s near t=${s.t.toFixed(2)}`);
   R.info.fastestJoint = Object.entries(maxSpeed).sort((a, b) => b[1].v - a[1].v).slice(0, 3).map(([j, s]) => `${j} ${s.v.toFixed(0)}deg/s`);

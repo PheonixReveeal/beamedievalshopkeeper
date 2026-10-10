@@ -31,6 +31,16 @@ on every keyframe, with CubicV2 or Linear easing. Contact sheets (front and side
 Durations add up to the 14-second opening: PanicRun (~1.5 s) → ArriveStop (1.5 s) → CatchBreath
 (~1.5 s) → ShowBrokenSword (3.8 s) → SlumpNotice (3.0 s) → PointShelf (2.4 s).
 
+## The whole opening
+
+[`previews/Opening_animatic.mp4`](previews/Opening_animatic.mp4) plays the animations on your 14-second
+timeline: run in, skid, catch breath, show the sword, slump and notice, turn and point. It uses
+Roblox-style crossfades, a simple stall set and subtitles. The timeline lives in
+`tools/introgen/sequences/Opening.json`, so you can try other timings there before scripting the real
+cutscene.
+
+![Animatic frame](previews/Opening_animatic.png)
+
 ## Quick start
 
 1. In Studio, right-click **ReplicatedStorage > Insert from File…** and pick `roblox/IntroAssets.rbxm`.

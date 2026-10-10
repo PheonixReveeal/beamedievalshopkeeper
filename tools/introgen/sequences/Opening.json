@@ -1,0 +1,318 @@
+{
+ "_note": "Animatic of the 14 s opening (preview/seqview.html). Clips crossfade like Roblox Animator tracks; 'at' and 'fade' in seconds. Path yaw in degrees (0 = facing -Z, positive = turning to the actor's left). Camera keys ease in-out.",
+ "length": 14,
+ "clips": [
+  {
+   "anim": "Intro_PanicRun",
+   "at": 0,
+   "fade": 0
+  },
+  {
+   "anim": "Intro_ArriveStop",
+   "at": 1.35,
+   "fade": 0.12
+  },
+  {
+   "anim": "Intro_CatchBreath",
+   "at": 2.85,
+   "fade": 0.3
+  },
+  {
+   "anim": "Intro_ShowBrokenSword",
+   "at": 4.4,
+   "fade": 0.3
+  },
+  {
+   "anim": "Intro_SlumpNotice",
+   "at": 8.2,
+   "fade": 0.25
+  },
+  {
+   "anim": "Intro_PointShelf",
+   "at": 11.2,
+   "fade": 0.15
+  }
+ ],
+ "path": [
+  {
+   "t": 0,
+   "pos": [
+    0,
+    26
+   ],
+   "yaw": 0
+  },
+  {
+   "t": 1.45,
+   "pos": [
+    0,
+    1.2
+   ],
+   "yaw": 0,
+   "ease": "out"
+  },
+  {
+   "t": 1.75,
+   "pos": [
+    0,
+    0
+   ],
+   "yaw": 0
+  },
+  {
+   "t": 10.95,
+   "pos": [
+    0,
+    0
+   ],
+   "yaw": 0,
+   "ease": "inout"
+  },
+  {
+   "t": 11.3,
+   "pos": [
+    0,
+    0
+   ],
+   "yaw": 60
+  },
+  {
+   "t": 14,
+   "pos": [
+    0,
+    0
+   ],
+   "yaw": 60
+  }
+ ],
+ "props": [
+  {
+   "t": 0,
+   "prop": "broken"
+  }
+ ],
+ "subtitles": [
+  {
+   "t": 0,
+   "text": ""
+  },
+  {
+   "t": 3.1,
+   "text": "Shopkeeper!"
+  },
+  {
+   "t": 4.3,
+   "text": ""
+  },
+  {
+   "t": 4.9,
+   "text": "My sword broke! My party's leaving without me!"
+  },
+  {
+   "t": 8.1,
+   "text": ""
+  },
+  {
+   "t": 9.7,
+   "text": "Please tell me you have another one..."
+  },
+  {
+   "t": 11.25,
+   "text": "That one! I'll take it!"
+  }
+ ],
+ "camera": {
+  "fov": 38,
+  "keys": [
+   {
+    "t": 0,
+    "pos": [
+     4.0,
+     4.8,
+     -14.5
+    ],
+    "look": [
+     10,
+     2.4,
+     -3
+    ]
+   },
+   {
+    "t": 0.9,
+    "pos": [
+     4.0,
+     4.8,
+     -14.5
+    ],
+    "look": [
+     0.5,
+     2.4,
+     14
+    ]
+   },
+   {
+    "t": 1.9,
+    "pos": [
+     4.0,
+     4.8,
+     -14.5
+    ],
+    "look": [
+     0,
+     2.3,
+     0
+    ]
+   },
+   {
+    "t": 10.9,
+    "pos": [
+     3.6,
+     4.6,
+     -13.5
+    ],
+    "look": [
+     0,
+     2.4,
+     0
+    ]
+   },
+   {
+    "t": 11.6,
+    "pos": [
+     4.2,
+     5.2,
+     -15.5
+    ],
+    "look": [
+     -2.0,
+     2.1,
+     -1.4
+    ]
+   },
+   {
+    "t": 14,
+    "pos": [
+     4.2,
+     5.2,
+     -15.5
+    ],
+    "look": [
+     -2.0,
+     2.1,
+     -1.4
+    ]
+   }
+  ]
+ },
+ "set": [
+  {
+   "pos": [
+    8,
+    1.6,
+    -4
+   ],
+   "size": [
+    6,
+    3.2,
+    2.2
+   ],
+   "color": "#7a5634"
+  },
+  {
+   "pos": [
+    8,
+    3.25,
+    -4
+   ],
+   "size": [
+    6.4,
+    0.2,
+    2.6
+   ],
+   "color": "#9a6d42"
+  },
+  {
+   "pos": [
+    10.5,
+    1,
+    -1
+   ],
+   "size": [
+    2,
+    2,
+    2
+   ],
+   "color": "#8b6a3e"
+  },
+  {
+   "pos": [
+    -5.2,
+    1.6,
+    -3.2
+   ],
+   "size": [
+    0.6,
+    3.2,
+    4.0
+   ],
+   "color": "#6e4b2c",
+   "rotY": -30
+  },
+  {
+   "pos": [
+    -5.2,
+    2.9,
+    -3.2
+   ],
+   "size": [
+    0.9,
+    0.15,
+    4.2
+   ],
+   "color": "#8a6038",
+   "rotY": -30
+  },
+  {
+   "pos": [
+    -4.254,
+    1.75,
+    -4.039
+   ],
+   "size": [
+    0.1,
+    2.0,
+    0.3
+   ],
+   "color": "#c9803f",
+   "rotY": -30
+  },
+  {
+   "pos": [
+    -4.854,
+    1.75,
+    -3.0
+   ],
+   "size": [
+    0.1,
+    2.0,
+    0.3
+   ],
+   "color": "#c9803f",
+   "rotY": -30
+  },
+  {
+   "pos": [
+    -5.454,
+    1.75,
+    -1.961
+   ],
+   "size": [
+    0.1,
+    2.0,
+    0.3
+   ],
+   "color": "#c9803f",
+   "rotY": -30
+  }
+ ]
+}
