@@ -1,0 +1,41 @@
+{
+  "name": "Intro_Thanks",
+  "loop": false,
+  "priority": "Action",
+  "prop": "intact",
+  "allowContact": [["LeftHand", "UpperTorso"], ["LeftLowerArm", "UpperTorso"]],
+  "keyframes": [
+    {"t": 0, "name": "Start", "poses": {
+      "UpperTorso": {"r": [-3, 0, 0]}, "Head": {"r": [2, 0, 0]},
+      "RightUpperArm": {"r": [10, 0, 7]}, "RightLowerArm": {"r": [28, 0, 0]}, "RightHand": {"r": [-62, 0, 0]},
+      "LeftUpperArm": {"r": [4, 0, -6]}, "LeftLowerArm": {"r": [12, 0, 0]}}},
+    {"t": 0.4, "name": "Relief", "dir": "Out", "poses": {
+      "LowerTorso": {"p": [0, -0.08, 0]},
+      "LeftUpperLeg": {"r": [18, 0, 0]}, "LeftLowerLeg": {"r": [-36, 0, 0]}, "LeftFoot": {"r": [18, 0, 0]},
+      "RightUpperLeg": {"r": [18, 0, 0]}, "RightLowerLeg": {"r": [-36, 0, 0]}, "RightFoot": {"r": [18, 0, 0]},
+      "UpperTorso": {"r": [-9, 0, 0]}, "Head": {"r": [20, 0, 0]},
+      "RightUpperArm": {"r": [5, 0, 12]}, "LeftUpperArm": {"r": [2, 0, -12]}, "LeftLowerArm": {"r": [6, 0, 0]}}},
+    {"t": 0.8, "name": "HandOnHeart", "poses": {
+      "LowerTorso": {"p": [0, 0, 0]},
+      "LeftUpperLeg": {"r": [0, 0, 0]}, "LeftLowerLeg": {"r": [0, 0, 0]}, "LeftFoot": {"r": [0, 0, 0]},
+      "RightUpperLeg": {"r": [0, 0, 0]}, "RightLowerLeg": {"r": [0, 0, 0]}, "RightFoot": {"r": [0, 0, 0]},
+      "UpperTorso": {"r": [-2, 0, 0]}, "Head": {"r": [0, 0, 0]},
+      "LeftUpperArm": {"r": [40, -35, 30]}, "LeftLowerArm": {"r": [118, 0, 0]}, "LeftHand": {"r": [0, 0, 0]},
+      "RightUpperArm": {"r": [14, 0, 14]}, "RightLowerArm": {"r": [26, 0, 0]}, "RightHand": {"r": [-45, 0, 0]}}},
+    {"t": 1.2, "name": "Bow", "markers": ["Bow"], "dir": "Out", "poses": {
+      "UpperTorso": {"r": [-32, 0, 0]}, "Head": {"r": [-14, 0, 0]},
+      "RightUpperArm": {"r": [22, 0, 20]}, "RightLowerArm": {"r": [20, 0, 0]}, "RightHand": {"r": [-30, 0, 0]}}},
+    {"t": 1.6, "poses": {"UpperTorso": {"r": [-35, 0, 0]}, "Head": {"r": [-16, 0, 0]}}},
+    {"t": 1.95, "name": "Cheer", "markers": ["Cheer"], "dir": "Out", "poses": {
+      "UpperTorso": {"r": [7, 0, 0]}, "Head": {"r": [12, 0, 0]},
+      "RightUpperArm": {"r": [165, 0, 12]}, "RightLowerArm": {"r": [5, 0, 0]}, "RightHand": {"r": [-75, 0, 0]},
+      "LeftUpperArm": {"r": [15, 0, -40]}, "LeftLowerArm": {"r": [45, 0, 0]}, "LeftHand": {"r": [0, 0, 0]}}},
+    {"t": 2.3, "poses": {
+      "UpperTorso": {"r": [4, 0, 0]}, "Head": {"r": [8, 0, 0]},
+      "RightUpperArm": {"r": [158, 0, 10]}, "LeftUpperArm": {"r": [12, 0, -34]}}},
+    {"t": 3.0, "name": "Settle", "poses": {
+      "UpperTorso": {"r": [-3, 0, 0]}, "Head": {"r": [2, 0, 0]},
+      "RightUpperArm": {"r": [10, 0, 7]}, "RightLowerArm": {"r": [28, 0, 0]}, "RightHand": {"r": [-62, 0, 0]},
+      "LeftUpperArm": {"r": [4, 0, -6]}, "LeftLowerArm": {"r": [12, 0, 0]}}}
+  ]
+}

@@ -417,7 +417,6 @@ for _, file in fs.readDir(HERE .. "anims") do
 end
 table.sort(animNames)
 save("Intro_Animations.rbxm", { animFolder })
-fs.writeFile(OUT .. "/../anim_dump.json", serde.encode("json", dump, false)) -- used by tests/check_builder.mjs
 
 -- Everything in one bundle, plus the runtime module
 local bundle = Instance.new("Folder")

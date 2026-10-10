@@ -6,13 +6,30 @@ Everything from the **Effects and Asset Request** except the audio (dropped by r
 |---|---|---|
 | `Intro_BrokenSword` | Low-poly broken sword made from ordinary Parts, so there's nothing to upload. The pivot sits at the grip. | `roblox/Intro_BrokenSword.rbxm` |
 | `Intro_BrokenSwordTool` | The same sword as a Tool, with `Tool.Grip` already set | `roblox/Intro_BrokenSwordTool.rbxm` |
-| `Intro_BrokenSwordTip` | The snapped-off piece (optional prop) | `roblox/Intro_BrokenSwordTip.rbxm` |
 | `Intro_RunDust` | Beige footstep dust puffs (Attachment with a ParticleEmitter) | `roblox/Intro_RunDust.rbxm` |
 | `Intro_SkidDust` | Brief, low dust burst for the stop | `roblox/Intro_SkidDust.rbxm` |
 | Animations | 8 R15 `KeyframeSequence`s you can edit and publish | `roblox/Intro_Animations.rbxm` |
 | **Everything** | All of the above, plus the `IntroKit` helper module and a demo script | `roblox/IntroAssets.rbxm` |
 
-ANIMATION_TABLE
+## Animations (R15)
+
+| Animation | Length | Loops | What happens |
+|---|---|---|---|
+| ![](previews/anims/Intro_PanicRun.webp) `Intro_PanicRun` | 0.56 s | yes | Panicked in-place run: big strides, left arm flailing overhead, broken sword waved up high. Play while `Humanoid:MoveTo` moves the actor (WalkSpeed 18–20). |
+| ![](previews/anims/Intro_ArriveStop.webp) `Intro_ArriveStop` | 1.5 s | no | Plants a foot and skids, leaning back with arms flung out, wobbles forward, then settles hunched and winded. |
+| ![](previews/anims/Intro_CatchBreath.webp) `Intro_CatchBreath` | 1.3 s | yes | Bent over, hands on knees, two heaving breaths per loop. |
+| ![](previews/anims/Intro_ShowBrokenSword.webp) `Intro_ShowBrokenSword` | 3.8 s | no | Raises the broken sword in front of the face, stares at it, wiggles it, then turns to the player with a pleading open hand. |
+| ![](previews/anims/Intro_SlumpNotice.webp) `Intro_SlumpNotice` | 3.0 s | no | Shoulders slump and the sword droops, then the head snaps to the actor's **left** with a hopeful perk-up. |
+| ![](previews/anims/Intro_SlumpNoticeRight.webp) `Intro_SlumpNoticeRight` | 3.0 s | no | A mirror of the above, for a display on the actor's **right**. |
+| ![](previews/anims/Intro_PointShelf.webp) `Intro_PointShelf` | 2.4 s | no | Wind-up, an emphatic left-hand point straight ahead, excited bounces, then a sword-arm pump. |
+| ![](previews/anims/Intro_Thanks.webp) `Intro_Thanks` | 3.0 s | no | Relieved exhale, hand on heart and a bow, then raises the new sword overhead and settles. |
+
+All are R15 `KeyframeSequence`s with `Action` priority, authored for HipHeight 2. Every joint is keyed
+on every keyframe, with CubicV2 or Linear easing. Contact sheets (front and side views) are in
+`previews/anims/*.png`.
+
+Durations add up to the 14-second opening: PanicRun (~1.5 s) → ArriveStop (1.5 s) → CatchBreath
+(~1.5 s) → ShowBrokenSword (3.8 s) → SlumpNotice (3.0 s) → PointShelf (2.4 s).
 
 ## Quick start
 
@@ -65,7 +82,18 @@ IntroKit.Cleanup(actor)                                         -- on Skip, resp
 
 ### Markers
 
-MARKER_TABLE
+| Marker | In | Fires when | Suggested use |
+|---|---|---|---|
+| `FootstepL`, `FootstepR` | Intro_PanicRun | a foot lands | `BindEffects` puffs run dust from that foot |
+| `Skid` | Intro_ArriveStop (0.1 s) | the front foot plants | `BindEffects` bursts skid dust; stop moving the actor |
+| `Stop` | Intro_ArriveStop (1.5 s) | they come to rest | start `Intro_CatchBreath` |
+| `Raise` | Intro_ShowBrokenSword (0.16 s) | the sword starts coming up | |
+| `Clink` | Intro_ShowBrokenSword (1.46 s) | the broken blade is wiggled | blade glint (and a clink, if you add audio later) |
+| `LookAtPlayer` | Intro_ShowBrokenSword (2.0 s) | they turn back to the player | second subtitle line |
+| `Slump` | Intro_SlumpNotice (0.3 s) | shoulders drop | |
+| `Notice` | Intro_SlumpNotice (1.48 s) | they spot the display | "Please tell me you have another one…" |
+| `Point` | Intro_PointShelf (0.44 s) | the point lands | highlight the shelf |
+| `Bow`, `Cheer` | Intro_Thanks (1.2 s, 1.95 s) | the bow, raising the new sword | |
 
 ## Publishing the animations (to get ids)
 
@@ -82,7 +110,7 @@ Copy each new id into `IntroKit > AnimationIds` (for example `Intro_CatchBreath 
 
 ## The sword
 
-![Intro_BrokenSword](previews/Intro_BrokenSword.png)
+![Intro_BrokenSword held in the hand](previews/Intro_BrokenSword_held.png)
 
 - Built from Parts with Roblox materials, so there's nothing to upload and it streams like any part.
 - `Handle` is the grip. It's the Model's `PrimaryPart`, and the Model's pivot sits at the grip. A
@@ -94,7 +122,16 @@ Copy each new id into `IntroKit > AnimationIds` (for example `Intro_CatchBreath 
 
 ## The dust
 
-DUST_SECTION
+- `Intro_RunDust` is an Attachment holding a `Puff` ParticleEmitter: small beige puffs that rise
+  and fade in under 0.9 s. IntroKit emits `EmitCount` (3) of them at each footstep marker, from an
+  attachment under each foot. You can also turn it on continuously with `dust:SetRunning(true)`
+  (Rate 14).
+- `Intro_SkidDust` is an Attachment holding a `Cloud` emitter: a low, fast fan of dust sprayed
+  forward (the actor's -Z) that drags to a stop and fades within about 1 s. `EmitCount` is 14.
+- Both use Roblox's built-in `rbxasset://textures/particles/smoke_main.dds`, so they work without
+  uploading anything. They're lit like the world (LightInfluence 1), so they don't glow.
+- To change counts, sizes or colours, edit `tools/introgen/props/Intro_Dust.json` and rebuild, or
+  edit the emitters in Studio.
 
 ## Editing and regenerating
 
